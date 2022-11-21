@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	font-family: "Inter", sans-serif;
+}
+
+section {
+	min-height: 100vh;
+	min-width: 100vw;
+	max-width: 100%;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+	font-weight: lighter;
+}
+
+h1 {
+	font-family: "DM Serif Text", serif;
+	font-size: 100px;
+	font-weight: lighter;
+}
+
+h2 {
+	font-family: "DM Sans", sans-serif;
+}
+
+button {
+	font-family: "DM Sans", sans-serif;
+}
+
+.hero-container {
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.257),
+			rgba(255, 255, 255, 0.267)
+		),
+		url(assets/hero-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-desc {
+	width: 600px;
+	margin: 16px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.hero-nav button {
+	width: 100px;
+	height: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+	.hero-desc {
+		width: 90%;
+	}
+}
