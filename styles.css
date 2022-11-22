@@ -476,6 +476,9 @@ button:hover {
 	.house-option {
 		width: 150px;
 	}
+	.house-option li {
+		margin: 6px auto;
+	}
 	.house-option:hover {
 		transform: scale(0.97);
 	}
