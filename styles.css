@@ -160,6 +160,10 @@ button:hover {
 	align-self: flex-start;
 }
 
+.house-option a {
+	color: white;
+}
+
 .house-option:hover {
 	transform: scale(1.1);
 	filter: grayscale(0);
@@ -331,9 +335,9 @@ button:hover {
 }
 
 .house-wrapper {
-	display: flex;
 	align-items: center;
 	justify-content: center;
+	display: none;
 }
 
 .house-desc {
