@@ -133,12 +133,13 @@ button:hover {
 	justify-content: center;
 	flex-wrap: wrap;
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 .house-heading {
 	flex-basis: 100%;
 	align-self: flex-end;
-	margin-bottom: 20px;
+	margin: 20px auto;
 }
 
 .house-heading p {

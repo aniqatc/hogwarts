@@ -10,34 +10,46 @@ let huffleContent = document.querySelector("#hufflepuff");
 let ravenContent = document.querySelector("#ravenclaw");
 let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
 
-gryffBtn.addEventListener("click", function () {
-	if (gryffContent.style.display === "none" && window.innerWidth >= 600) {
-		gryffContent.style.display = "flex";
+houseBtns[0].addEventListener("click", function () {
+	if (houseContent[0].style.display === "none" && window.innerWidth >= 600) {
+		houseContent[0].style.display = "flex";
+		houseContent[1].style.display = "none";
+		houseContent[2].style.display = "none";
+		houseContent[3].style.display = "none";
 	} else {
-		gryffContent.style.display = "none";
+		houseContent[0].style.display = "none";
 	}
 });
 
-slythBtn.addEventListener("click", function () {
-	if (slythContent.style.display === "none" && window.innerWidth >= 600) {
-		slythContent.style.display = "flex";
+houseBtns[1].addEventListener("click", function () {
+	if (houseContent[1].style.display === "none" && window.innerWidth >= 600) {
+		houseContent[1].style.display = "flex";
+		houseContent[0].style.display = "none";
+		houseContent[2].style.display = "none";
+		houseContent[3].style.display = "none";
 	} else {
-		slythContent.style.display = "none";
+		houseContent[1].style.display = "none";
 	}
 });
 
-ravenBtn.addEventListener("click", function () {
-	if (ravenContent.style.display === "none" && window.innerWidth >= 600) {
-		ravenContent.style.display = "flex";
+houseBtns[3].addEventListener("click", function () {
+	if (houseContent[3].style.display === "none" && window.innerWidth >= 600) {
+		houseContent[3].style.display = "flex";
+		houseContent[0].style.display = "none";
+		houseContent[1].style.display = "none";
+		houseContent[2].style.display = "none";
 	} else {
-		ravenContent.style.display = "none";
+		houseContent[3].style.display = "none";
 	}
 });
 
-huffleBtn.addEventListener("click", function () {
-	if (huffleContent.style.display === "none" && window.innerWidth >= 600) {
-		huffleContent.style.display = "flex";
+houseBtns[2].addEventListener("click", function () {
+	if (houseContent[2].style.display === "none" && window.innerWidth >= 600) {
+		houseContent[2].style.display = "flex";
+		houseContent[0].style.display = "none";
+		houseContent[1].style.display = "none";
+		houseContent[3].style.display = "none";
 	} else {
-		huffleContent.style.display = "none";
+		houseContent[2].style.display = "none";
 	}
 });
