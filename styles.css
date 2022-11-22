@@ -378,7 +378,7 @@ button:hover {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	border: 1px solid;
+	border: 1px solid #aeaeae;
 	border-radius: 10px;
 	background: transparent;
 	text-align: center;
@@ -393,6 +393,12 @@ button:hover {
 	background: #121212;
 	font-weight: bold;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+}
+
+.course-listing i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 10px;
 }
 
 @keyframes color-changes {
@@ -413,13 +419,7 @@ button:hover {
 	}
 }
 
-.course-listing i {
-	display: block;
-	font-size: 26px;
-	margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
 	.house-desc {
 		flex-wrap: wrap;
 		margin: 10px;
