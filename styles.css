@@ -116,7 +116,7 @@ button:hover {
 
 .hero-nav button:hover {
 	background: #121212;
-	color: #ffd700;
+	animation: color-changes 2s ease-in alternate-reverse infinite;
 	transform: scale(1.08);
 }
 
@@ -354,6 +354,11 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
+}
+
+.course-container p {
+	margin: 20px auto;
 }
 
 .course-heading {
@@ -386,7 +391,26 @@ button:hover {
 
 .course-listing:hover {
 	background: #121212;
-	color: #ffd700;
+	font-weight: bold;
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+}
+
+@keyframes color-changes {
+	0% {
+		color: #ffd700;
+	}
+	25% {
+		color: #ad9e1a;
+	}
+	50% {
+		color: #4cbc58;
+	}
+	75% {
+		color: #6a9be9;
+	}
+	100% {
+		color: #e03a3a;
+	}
 }
 
 .course-listing i {
@@ -403,7 +427,6 @@ button:hover {
 
 	.course-listing-container {
 		grid-template-columns: repeat(auto-fit, 120px);
-		grid-template-rows: auto;
 	}
 }
 
@@ -451,20 +474,18 @@ button:hover {
 	.house-desc {
 		padding: 0;
 	}
-
 	.course-listing:nth-last-child(2) {
 		grid-column-start: 1;
 		grid-row-end: 2;
 	}
-
 	.course-listing:last-child {
-		grid-column-start: span 3;
+		grid-column-start: 2;
 	}
 }
 
 @media only screen and (max-width: 500px) {
 	h1 {
-		font-size: 65px;
+		font-size: 62px;
 	}
 
 	.house-desc img {
@@ -483,11 +504,21 @@ button:hover {
 		margin: 0;
 	}
 
+	.house-content-expanded {
+		padding: 10px 6px;
+	}
+
 	.house-content-expanded li {
 		line-height: 34px;
 	}
+
+	.course-listing-container {
+		grid-template-columns: repeat(auto-fit, 90px);
+	}
+
 	.course-listing {
-		width: 110px;
-		height: 110px;
+		width: 90px;
+		height: 90px;
+		font-size: 15px;
 	}
 }
