@@ -492,6 +492,9 @@ button:hover {
 	.course-listing:last-child {
 		grid-column-start: 2;
 	}
+	.house-wrapper {
+		display: flex;
+	}
 }
 
 @media only screen and (max-width: 500px) {
