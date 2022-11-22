@@ -53,3 +53,14 @@ houseBtns[2].addEventListener("click", function () {
 		houseContent[2].style.display = "none";
 	}
 });
+
+let expandAll = document.querySelector(".expand-houses");
+expandAll.addEventListener("click", function () {
+	houseContent.forEach(function (house) {
+		if (house.style.display === "none") {
+			house.style.display = "flex";
+		} else {
+			house.style.display = "none";
+		}
+	});
+});
