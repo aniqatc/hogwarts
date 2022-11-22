@@ -15,14 +15,16 @@ h2,
 h3,
 p {
 	margin: 0;
-	font-weight: lighter;
 }
 
 h1 {
 	font-family: "DM Serif Text", serif;
 	font-size: 100px;
 	font-weight: lighter;
-	text-align: center;
+}
+
+h2 {
+	font-weight: bold;
 }
 
 h2,
@@ -53,6 +55,10 @@ li {
 
 .house-option li {
 	display: none;
+	background: rgba(0, 0, 0, 0.6);
+	margin: 4px 40px;
+	padding: 2px 5px;
+	border-radius: 10px;
 }
 
 .house-option:hover li {
@@ -120,7 +126,7 @@ button:hover {
 	display: block;
 }
 
-.house-select-container {
+.house-selection-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -132,6 +138,11 @@ button:hover {
 	flex-basis: 100%;
 	align-self: flex-end;
 	margin-bottom: 20px;
+}
+
+.house-heading p {
+	width: 400px;
+	margin: 0 auto;
 }
 
 .house-option {
@@ -213,46 +224,6 @@ button:hover {
 		brightness(97%) contrast(86%);
 }
 
-.avatars {
-	text-align: center;
-}
-
-.raven-alumni {
-	width: 75px;
-	border: 7px solid #121555;
-	border-radius: 50px;
-	margin: 5px 5px;
-}
-
-.slyth-alumni {
-	width: 75px;
-	border: 7px solid #0a3122;
-	border-radius: 50px;
-	margin: 5px 5px;
-}
-
-.gryff-alumni {
-	width: 75px;
-	border: 7px solid #6e2427;
-	border-radius: 50px;
-	margin: 5px 5px;
-}
-
-.huffle-alumni {
-	width: 75px;
-	border: 7px solid #6a5a17;
-	border-radius: 50px;
-	margin: 5px 5px;
-}
-
-.avatars img {
-	transition: all 200ms ease-in;
-}
-
-.avatars img:hover {
-	transform: scale(1.2);
-}
-
 .house-content-expanded {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(5px);
@@ -318,41 +289,120 @@ button:hover {
 	background: #6a5a17;
 }
 
-.house-details {
+.avatars {
+	text-align: center;
+}
+
+.raven-alumni {
+	width: 75px;
+	border: 7px solid #121555;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.slyth-alumni {
+	width: 75px;
+	border: 7px solid #0a3122;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.gryff-alumni {
+	width: 75px;
+	border: 7px solid #6e2427;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.huffle-alumni {
+	width: 75px;
+	border: 7px solid #6a5a17;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.avatars img {
+	transition: all 200ms ease-in;
+}
+
+.avatars img:hover {
+	transform: scale(1.2);
+}
+
+.house-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.house-text {
+.house-desc {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 }
 
-.house-text p {
+.house-desc p {
 	width: 400px;
 }
 
-.house-text img {
+.house-desc img {
 	width: 350px;
 }
 
-.house-text span {
-	font-weight: 100;
-	font-size: smaller;
-	display: block;
-	border-radius: 6px;
-	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
-	padding: 6px;
-	margin: 2px 10px;
+.course-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-@media only screen and (max-width: 900px) {
-	.house-text {
+.course-heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.course-listing-container {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	align-items: center;
+	justify-content: center;
+	gap: 25px;
+}
+
+.course-listing {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 1px solid;
+	border-radius: 10px;
+	background: transparent;
+	text-align: center;
+	padding: 5px;
+	width: 120px;
+	height: 120px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	transition: all 200ms ease-in;
+}
+
+.course-listing:hover {
+	background: #121212;
+	color: #ffd700;
+}
+
+.course-listing i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+	.house-desc {
 		flex-wrap: wrap;
 		margin: 10px;
+	}
+
+	.course-listing-container {
+		grid-template-columns: repeat(auto-fit, 120px);
+		grid-template-rows: auto;
 	}
 }
 
@@ -383,7 +433,7 @@ button:hover {
 	.house-option:hover {
 		transform: scale(0.97);
 	}
-	.house-text {
+	.house-desc {
 		padding: 0;
 	}
 }
