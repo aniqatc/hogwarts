@@ -2,11 +2,13 @@ let gryffBtn = document.querySelector("#gryffindor-btn");
 let slythBtn = document.querySelector("#slytherin-btn");
 let huffleBtn = document.querySelector("#hufflepuff-btn");
 let ravenBtn = document.querySelector("#ravenclaw-btn");
+let houseBtns = [gryffBtn, slythBtn, huffleBtn, ravenBtn];
 
 let gryffContent = document.querySelector("#gryffindor");
 let slythContent = document.querySelector("#slytherin");
 let huffleContent = document.querySelector("#hufflepuff");
 let ravenContent = document.querySelector("#ravenclaw");
+let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
 
 gryffBtn.addEventListener("click", function () {
 	if (gryffContent.style.display === "none" && window.innerWidth >= 600) {

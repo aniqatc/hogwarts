@@ -406,6 +406,18 @@ button:hover {
 	margin-bottom: 10px;
 }
 
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container button {
+	margin: 5px;
+	padding: 10px;
+}
+
 @keyframes color-changes {
 	0% {
 		color: #ffd700;
