@@ -525,7 +525,7 @@ button:hover {
 	}
 	.house-wrapper {
 		display: flex;
-		margin-top: 0px;
+		margin: 0px;
 	}
 }
 
