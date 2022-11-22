@@ -424,6 +424,9 @@ button:hover {
 	.hero-nav i {
 		font-size: 20px;
 	}
+	.house-heading p {
+		width: 290px;
+	}
 	.house-option img {
 		width: 120px;
 	}
@@ -435,5 +438,31 @@ button:hover {
 	}
 	.house-desc {
 		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: 65px;
+	}
+
+	.house-desc img {
+		width: 260px;
+	}
+
+	.house-desc p {
+		width: 280px;
+	}
+
+	.raven-alumni,
+	.slyth-alumni,
+	.gryff-alumni,
+	.huffle-alumni {
+		width: 55px;
+		margin: 0;
+	}
+
+	.house-content-expanded li {
+		line-height: 34px;
 	}
 }
