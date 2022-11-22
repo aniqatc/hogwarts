@@ -67,6 +67,7 @@ li {
 
 button {
 	font-family: "DM Sans", sans-serif;
+	color: #121212;
 }
 
 button:hover {
@@ -363,7 +364,7 @@ button:hover {
 
 .course-heading {
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .course-listing-container {
 	display: grid;
@@ -461,6 +462,9 @@ button:hover {
 	}
 	.house-heading p {
 		width: 290px;
+	}
+	.house-content-expanded {
+		border-radius: 0;
 	}
 	.house-option img {
 		width: 120px;
