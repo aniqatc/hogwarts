@@ -1,6 +1,7 @@
 body {
 	margin: 0;
-	font-family: "Inter", sans-serif;
+	background: rgba(246, 246, 246, 0.8);
+	font-family: "DM Sans", sans-serif;
 }
 
 section {
@@ -21,6 +22,7 @@ h1 {
 	font-family: "DM Serif Text", serif;
 	font-size: 100px;
 	font-weight: lighter;
+	text-align: center;
 }
 
 h2,
@@ -36,6 +38,7 @@ h3 {
 
 a {
 	text-decoration: none;
+	color: #121212;
 }
 
 ul {
@@ -46,8 +49,10 @@ li {
 	list-style-type: none;
 	font-size: small;
 	text-transform: uppercase;
+}
+
+.house-option li {
 	display: none;
-	transition: all 3s ease-in;
 }
 
 .house-option:hover li {
@@ -121,7 +126,6 @@ button:hover {
 	justify-content: center;
 	flex-wrap: wrap;
 	text-align: center;
-	background: rgba(246, 246, 246, 0.8);
 }
 
 .house-heading {
@@ -209,6 +213,149 @@ button:hover {
 		brightness(97%) contrast(86%);
 }
 
+.avatars {
+	text-align: center;
+}
+
+.raven-alumni {
+	width: 75px;
+	border: 7px solid #121555;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.slyth-alumni {
+	width: 75px;
+	border: 7px solid #0a3122;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.gryff-alumni {
+	width: 75px;
+	border: 7px solid #6e2427;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.huffle-alumni {
+	width: 75px;
+	border: 7px solid #6a5a17;
+	border-radius: 50px;
+	margin: 5px 5px;
+}
+
+.avatars img {
+	transition: all 200ms ease-in;
+}
+
+.avatars img:hover {
+	transform: scale(1.2);
+}
+
+.house-content-expanded {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	padding: 15px 30px;
+	color: white;
+	text-align: center;
+}
+
+.house-content-expanded li {
+	display: inline;
+	padding: 5px 10px;
+	border-radius: 20px;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+#gryffindor .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(154, 54, 50, 0.8) 0%,
+		rgba(88, 46, 47, 0.9) 100%
+	);
+}
+
+#slytherin .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(20, 79, 69, 0.9) 0%,
+		rgba(24, 66, 43, 0.9) 100%
+	);
+}
+
+#ravenclaw .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(36, 65, 105, 0.9) 0%,
+		rgba(21, 36, 59, 0.9) 100%
+	);
+}
+
+#hufflepuff .house-content-expanded {
+	background: linear-gradient(
+		179.97deg,
+		rgba(149, 101, 26, 0.9) 0.03%,
+		rgba(61, 47, 21, 0.9) 137.15%
+	);
+}
+
+#gryffindor li {
+	background: #6e2427;
+}
+
+#slytherin li {
+	background: #0a3122;
+}
+
+#ravenclaw li {
+	background: #121555;
+}
+
+#hufflepuff li {
+	background: #6a5a17;
+}
+
+.house-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.house-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.house-text p {
+	width: 400px;
+}
+
+.house-text img {
+	width: 350px;
+}
+
+.house-text span {
+	font-weight: 100;
+	font-size: smaller;
+	display: block;
+	border-radius: 6px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+	padding: 6px;
+	margin: 2px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+	.house-text {
+		flex-wrap: wrap;
+		margin: 10px;
+	}
+}
+
 @media only screen and (max-width: 550px) {
 	h1 {
 		font-size: 72px;
@@ -235,5 +382,8 @@ button:hover {
 	}
 	.house-option:hover {
 		transform: scale(0.97);
+	}
+	.house-text {
+		padding: 0;
 	}
 }
