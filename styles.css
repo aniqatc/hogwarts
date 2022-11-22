@@ -366,6 +366,7 @@ button:hover {
 	align-items: center;
 	justify-content: center;
 	gap: 25px;
+	margin: 20px;
 }
 
 .course-listing {
@@ -406,7 +407,18 @@ button:hover {
 	}
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 730px) {
+	.course-listing:nth-last-child(2) {
+		grid-column-start: 2;
+		margin: 0 auto;
+	}
+	.course-listing:last-child {
+		grid-column-start: 3;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
 	h1 {
 		font-size: 72px;
 	}
@@ -439,6 +451,15 @@ button:hover {
 	.house-desc {
 		padding: 0;
 	}
+
+	.course-listing:nth-last-child(2) {
+		grid-column-start: 1;
+		grid-row-end: 2;
+	}
+
+	.course-listing:last-child {
+		grid-column-start: span 3;
+	}
 }
 
 @media only screen and (max-width: 500px) {
@@ -464,5 +485,9 @@ button:hover {
 
 	.house-content-expanded li {
 		line-height: 34px;
+	}
+	.course-listing {
+		width: 110px;
+		height: 110px;
 	}
 }
