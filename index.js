@@ -1,3 +1,15 @@
+// EXPAND ALL HOUSE CARD DETAILS
+let expandAll = document.querySelector(".expand-houses");
+expandAll.addEventListener("click", function () {
+	houseContent.forEach(function (house) {
+		if (house.style.display === "flex") {
+			house.style.display = "none";
+		} else {
+			house.style.display = "flex";
+		}
+	});
+});
+
 // TOGGLE BETWEEN DIFFERENT CONTENT DIVS
 let gryffBtn = document.querySelector("#gryffindor-btn");
 let slythBtn = document.querySelector("#slytherin-btn");
@@ -53,17 +65,6 @@ houseBtns[2].addEventListener("click", function () {
 	} else {
 		houseContent[2].style.display = "none";
 	}
-});
-
-let expandAll = document.querySelector(".expand-houses");
-expandAll.addEventListener("click", function () {
-	houseContent.forEach(function (house) {
-		if (house.style.display === "flex") {
-			house.style.display = "none";
-		} else {
-			house.style.display = "flex";
-		}
-	});
 });
 
 // FORM FUNCTIONALITY
