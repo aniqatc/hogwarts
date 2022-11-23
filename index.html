@@ -41,12 +41,12 @@
 						<i class="fa-solid fa-wand-sparkles"></i>Discover Courses
 					</button></a
 				>
-				<a href="#form"
+				<a href="#footer"
 					><button id="reserve-nav-btn">
 						<i class="fa-solid fa-hat-wizard"></i>Reserve Seat
 					</button></a
 				>
-				<a href="#form"
+				<a href="#footer"
 					><button id="status-nav-btn">
 						<i class="fa-solid fa-envelope"></i>Check Status
 					</button></a
@@ -291,34 +291,47 @@
 			</div>
 			<div class="course-listing-container">
 				<div class="course-listing">
-					<i class="fa-solid fa-seedling"></i>Herbology
+					<i class="fa-solid fa-seedling"></i>
+					<span>Herbology</span>
+					<p>Study of magical and mundane plants</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-wand-magic"></i>History of Magic
+					<i class="fa-solid fa-wand-magic"></i><span>History of Magic</span>
+					<p>Study of magical history</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-book-skull"></i>Defense Against Dark Arts
+					<i class="fa-solid fa-book-skull"></i
+					><span>Defense Against Dark Arts</span>
+					<p>Study defensive magic</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-broom-ball"></i>Flight
+					<i class="fa-solid fa-broom-ball"></i><span>Flying</span>
+					<p>Learn how to fly brooms</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-regular fa-object-ungroup"></i>Trans<wbr />figuration
+					<i class="fa-regular fa-object-ungroup"></i
+					><span>Trans<wbr />figuration</span>
+					<p>Changing the form of an object</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-people-group"></i>Muggle Studies
+					<i class="fa-solid fa-people-group"></i><span>Muggle Studies</span>
+					<p>Study of non-magical topics</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-meteor"></i>Astronomy
+					<i class="fa-solid fa-meteor"></i><span>Astronomy</span>
+					<p>Study the planets and stars</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-route"></i>Apparition
+					<i class="fa-solid fa-route"></i><span>Apparition</span>
+					<p>Learn how to apparate from one location to another</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-atom"></i>Alchemy
+					<i class="fa-solid fa-atom"></i><span>Alchemy</span>
+					<p>Study the four elements & how to manipulate</p>
 				</div>
 				<div class="course-listing">
-					<i class="fa-solid fa-bottle-droplet"></i>Potions
+					<i class="fa-solid fa-bottle-droplet"></i><span>Potions</span>
+					<p>Learn how to brew magical potions</p>
 				</div>
 			</div>
 			<p>
@@ -326,9 +339,43 @@
 				directly.
 			</p>
 		</section>
-		<section class="form-container" id="form">
+		<section class="footer-container" id="footer">
 			<h1>Join Hogwarts</h1>
-			<button>Check Status</button><button>New Application</button>
+			<h2>Be apart of the world of magic & mystery!</h2>
+
+			<div class="form-container">
+				<div class="form">
+					<label for="name"
+						>What is your name?<input
+							type="text"
+							placeholder="John Doe"
+							id="name"
+					/></label>
+					<label for="age"
+						>How old are you? <input type="number" placeholder="12" id="age"
+					/></label>
+					<label for="house"> Which House would you like to join?</label>
+					<select name="house" id="house">
+						<option value="1">Gryffindor</option>
+						<option value="2">Slytherin</option>
+						<option value="3">Ravenclaw</option>
+						<option value="4">Hufflepuff</option>
+					</select>
+					<label for="trait"
+						>What trait best describes you?
+						<input type="text" placeholder="Modest" id="trait"
+					/></label>
+					<label for="applied"
+						>Have you applied before?
+						<input type="text" placeholder="Yes/No" id="applied"
+					/></label>
+				</div>
+				<div class="form-btns">
+					<button id="status-check-btn">Check Status</button
+					><button id="apply-btn">New Application</button>
+				</div>
+				<div class="submission-response"></div>
+			</div>
 		</section>
 		<script src="index.js"></script>
 	</body>

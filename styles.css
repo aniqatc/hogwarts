@@ -317,7 +317,7 @@ button:hover {
 
 .raven-alumni {
 	width: 75px;
-	border: 7px solid #121555;
+	border: 7px solid #0e136c;
 	border-radius: 50px;
 	margin: 5px 5px;
 }
@@ -331,14 +331,14 @@ button:hover {
 
 .gryff-alumni {
 	width: 75px;
-	border: 7px solid #6e2427;
+	border: 7px solid #891b1e;
 	border-radius: 50px;
 	margin: 5px 5px;
 }
 
 .huffle-alumni {
 	width: 75px;
-	border: 7px solid #6a5a17;
+	border: 7px solid #947c19;
 	border-radius: 50px;
 	margin: 5px 5px;
 }
@@ -419,22 +419,94 @@ button:hover {
 	animation: color-changes 2s ease-in alternate-reverse infinite;
 }
 
+.course-listing:hover p {
+	display: block;
+}
+
+.course-listing:hover span {
+	display: none;
+}
+
+.course-listing:hover i {
+	margin: 0;
+	font-size: 22px;
+}
+
 .course-listing i {
 	display: block;
 	font-size: 26px;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 
-.form-container {
+.course-listing p {
+	font-size: 12px;
+	display: none;
+}
+
+.footer-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.form-container button {
-	margin: 5px;
-	padding: 10px;
+.footer-container h2 {
+	margin-bottom: 20px;
+}
+
+#apply-btn,
+#status-check-btn {
+	font-weight: 600;
+	margin: 16px;
+	padding: 14px 20px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+}
+
+#apply-btn {
+	background: rgba(149, 101, 26, 0.9);
+	color: rgb(238, 238, 238);
+}
+
+#apply-btn:hover,
+#status-check-btn:hover {
+	background: #121212;
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	transform: scale(1.08);
+}
+
+.form-container {
+	background: rgba(21, 36, 59, 0.9);
+	border-radius: 8px;
+	color: white;
+	padding: 24px 50px;
+	text-align: center;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+input,
+select {
+	margin: 10px auto;
+	display: block;
+	height: 30px;
+	width: 80%;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+label {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+input {
+	padding: 0 10px;
+}
+
+select {
+	width: 86%;
 }
 
 @keyframes color-changes {
@@ -475,16 +547,31 @@ button:hover {
 		grid-column-start: 3;
 		margin: 0 auto;
 	}
-}
+	.house-option img {
+		width: 90px;
+	}
+	.house-option {
+		width: 90px;
+	}
+	.house-option h3 {
+		font-size: 20px;
+	}
+	.house-option li {
+		margin: 6px auto;
+	}
 
-@media only screen and (max-width: 600px) {
+	.house-option:hover {
+		transform: scale(0.97);
+	}
 	h1 {
 		font-size: 72px;
 	}
-
 	h2 {
 		font-size: medium;
 	}
+}
+
+@media only screen and (max-width: 600px) {
 	.hero-desc {
 		width: 90%;
 	}
@@ -501,18 +588,7 @@ button:hover {
 	.house-content-expanded {
 		border-radius: 0;
 	}
-	.house-option img {
-		width: 120px;
-	}
-	.house-option {
-		width: 150px;
-	}
-	.house-option li {
-		margin: 6px auto;
-	}
-	.house-option:hover {
-		transform: scale(0.97);
-	}
+
 	.house-desc {
 		padding: 0;
 	}
@@ -524,14 +600,14 @@ button:hover {
 		grid-column-start: 2;
 	}
 	.house-wrapper {
-		display: flex;
+		/* display: flex; */
 		margin: 0px;
 	}
 }
 
 @media only screen and (max-width: 500px) {
 	h1 {
-		font-size: 62px;
+		font-size: 60px;
 	}
 
 	.house-desc img {
@@ -540,6 +616,10 @@ button:hover {
 
 	.house-desc p {
 		width: 280px;
+	}
+
+	.house-option {
+		padding: 40px;
 	}
 
 	.raven-alumni,
