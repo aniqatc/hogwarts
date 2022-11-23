@@ -355,12 +355,7 @@
 						>How old are you? <input type="number" placeholder="12" id="age"
 					/></label>
 					<label for="house"> Which House would you like to join?</label>
-					<select name="house" id="house">
-						<option value="1">Gryffindor</option>
-						<option value="2">Slytherin</option>
-						<option value="3">Ravenclaw</option>
-						<option value="4">Hufflepuff</option>
-					</select>
+					<input type="text" placeholder="Slytherin" id="house" />
 					<label for="trait"
 						>What trait best describes you?
 						<input type="text" placeholder="Modest" id="trait"
@@ -374,7 +369,8 @@
 					<button id="status-check-btn">Check Status</button
 					><button id="apply-btn">New Application</button>
 				</div>
-				<div class="submission-response"></div>
+
+				<h4 class="submission-response"></h4>
 			</div>
 		</section>
 		<script src="index.js"></script>

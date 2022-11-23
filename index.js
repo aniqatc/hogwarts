@@ -67,3 +67,83 @@ expandAll.addEventListener("click", function () {
 });
 
 // FORM FUNCTIONALITY
+let apply = () => {
+	let name = document.querySelector("#name").value;
+	let age = document.querySelector("#age").value;
+	let house = document.querySelector("#house").value;
+	let trait = document.querySelector("#trait").value;
+	let response = document.querySelector(".submission-response");
+
+	house = house.toLowerCase().trim();
+	trait = trait.toLowerCase().trim();
+
+	if (
+		(age >= 11 && house === "ravenclaw" && trait === "clever") ||
+		trait === "creative" ||
+		trait === "witty" ||
+		trait === "curious" ||
+		trait === "observant"
+	) {
+		response.textContent = `You're a match for Ravenclaw! Congrats, ${name}! We'll be in touch with you soon. 🦅`;
+
+		// Slytherin
+	} else if (
+		(age >= 11 && house === "slytherin" && trait === "ambitious") ||
+		trait === "cunning" ||
+		trait === "pride" ||
+		trait === "leadership" ||
+		trait === "competitive"
+	) {
+		response.textContent = `${name}, you'd be a great addition to Slytherin! 🐍 We'll be in touch with you soon.`;
+
+		// Gryffindor
+	} else if (
+		(age >= 11 && house === "gryffindor" && trait === "brave") ||
+		trait === "determination" ||
+		trait === "adventurous" ||
+		trait === "idealistic" ||
+		trait === "daring"
+	) {
+		response.textContent = `${name}, you'd be a great addition to Gryffindor! 🦁 We'll be in touch with you soon.`;
+
+		// Hufflepuff
+	} else if (
+		(age >= 11 && house === "hufflepuff" && trait === "dedicated") ||
+		trait === "hardworking" ||
+		trait === "loyal" ||
+		trait === "patient" ||
+		trait === "modest"
+	) {
+		response.textContent = `${name}, you'd be a great addition to Hufflepuff! 🦡 We'll be in touch with you soon.`;
+	}
+
+	// Underage
+	if (age < 10) {
+		response.textContent = `🚨 Sorry, you have not provided enough information or you are not qualified.`;
+	}
+};
+
+let applyBtn = document.getElementById("apply-btn");
+applyBtn.addEventListener("click", apply);
+
+// Status
+let statusCheck = () => {
+	let name = document.querySelector("#name").value;
+	let age = document.querySelector("#age").value;
+	let applied = document.querySelector("#applied").value;
+	let response = document.querySelector(".submission-response");
+
+	applied = applied.toLowerCase().trim();
+
+	if (age >= 11 && applied === "yes") {
+		response.textContent = `Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions. 🦉`;
+	} else if ((age < 11 && applied === "no") || applied === "yes") {
+		response.textContent = `Unfortunately, you're not old enough, ${name}. Please check back in once you've turned 11. 🎂`;
+	} else if (age >= 11 && applied === "no") {
+		response.textContent = `You are qualified to apply, ${name}!`;
+	} else {
+		response.textContent = `🚨 Sorry, you have not provided enough information.`;
+	}
+};
+let statusBtn = document.getElementById("status-check-btn");
+statusBtn.addEventListener("click", statusCheck);

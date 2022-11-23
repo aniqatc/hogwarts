@@ -13,6 +13,7 @@ section {
 h1,
 h2,
 h3,
+h4,
 p {
 	margin: 0;
 }
@@ -53,16 +54,23 @@ li {
 	text-transform: uppercase;
 }
 
-.house-option li {
-	display: none;
-	background: rgba(0, 0, 0, 0.6);
-	margin: 4px 40px;
-	padding: 2px 5px;
-	border-radius: 10px;
+input {
+	margin: 10px auto;
+	display: block;
+	height: 30px;
+	width: 84%;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-.house-option:hover li {
-	display: block;
+label {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+input {
+	padding: 0 10px;
 }
 
 button {
@@ -191,6 +199,18 @@ button:hover {
 	width: 250px;
 	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg)
 		brightness(107%) contrast(105%);
+}
+
+.house-option li {
+	display: none;
+	background: rgba(0, 0, 0, 0.6);
+	margin: 4px 40px;
+	padding: 2px 5px;
+	border-radius: 10px;
+}
+
+.house-option:hover li {
+	display: block;
 }
 
 #gryffindor-btn {
@@ -417,6 +437,7 @@ button:hover {
 	background: #121212;
 	font-weight: bold;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+	cursor: pointer;
 }
 
 .course-listing:hover p {
@@ -444,6 +465,7 @@ button:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 .footer-container h2 {
@@ -453,7 +475,8 @@ button:hover {
 #apply-btn,
 #status-check-btn {
 	font-weight: 600;
-	margin: 16px;
+	margin: 10px;
+	width: 150px;
 	padding: 14px 20px;
 	border-radius: 10px;
 	border: none;
@@ -463,6 +486,10 @@ button:hover {
 #apply-btn {
 	background: rgba(149, 101, 26, 0.9);
 	color: rgb(238, 238, 238);
+}
+
+#status-check-btn {
+	background: rgb(205, 200, 200);
 }
 
 #apply-btn:hover,
@@ -477,32 +504,16 @@ button:hover {
 	border-radius: 8px;
 	color: white;
 	padding: 24px 50px;
-	text-align: center;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-input,
-select {
-	margin: 10px auto;
-	display: block;
-	height: 30px;
-	width: 80%;
-	border-radius: 5px;
-	border: none;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-label {
-	font-size: 14px;
-	font-weight: 500;
-}
-
-input {
-	padding: 0 10px;
-}
-
-select {
-	width: 86%;
+.submission-response {
+	width: 300px;
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 4px;
+	border-radius: 4px;
 }
 
 @keyframes color-changes {
@@ -603,7 +614,7 @@ select {
 
 @media only screen and (max-width: 500px) {
 	h1 {
-		font-size: 56px;
+		font-size: 60px;
 	}
 
 	.house-desc img {
@@ -642,5 +653,11 @@ select {
 		width: 90px;
 		height: 90px;
 		font-size: 15px;
+	}
+
+	#apply-btn,
+	#status-check-btn {
+		margin: 10px 0;
+		width: 90%;
 	}
 }
