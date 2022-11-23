@@ -58,10 +58,10 @@ houseBtns[2].addEventListener("click", function () {
 let expandAll = document.querySelector(".expand-houses");
 expandAll.addEventListener("click", function () {
 	houseContent.forEach(function (house) {
-		if (house.style.display === "none") {
-			house.style.display = "flex";
-		} else {
+		if (house.style.display === "flex") {
 			house.style.display = "none";
+		} else {
+			house.style.display = "flex";
 		}
 	});
 });
@@ -84,7 +84,7 @@ let apply = () => {
 		trait === "curious" ||
 		trait === "observant"
 	) {
-		response.textContent = `You're a match for Ravenclaw! Congrats, ${name}! We'll be in touch with you soon. 🦅`;
+		response.textContent = `🦅 You're a match for Ravenclaw! Congrats, ${name}! We'll be in touch with you soon.`;
 
 		// Slytherin
 	} else if (
@@ -94,7 +94,7 @@ let apply = () => {
 		trait === "leadership" ||
 		trait === "competitive"
 	) {
-		response.textContent = `${name}, you'd be a great addition to Slytherin! 🐍 We'll be in touch with you soon.`;
+		response.textContent = `🐍 ${name}, you'd be a great addition to Slytherin! We'll be in touch with you soon.`;
 
 		// Gryffindor
 	} else if (
@@ -104,7 +104,7 @@ let apply = () => {
 		trait === "idealistic" ||
 		trait === "daring"
 	) {
-		response.textContent = `${name}, you'd be a great addition to Gryffindor! 🦁 We'll be in touch with you soon.`;
+		response.textContent = `🦁 ${name}, you'd be a great addition to Gryffindor! We'll be in touch with you soon.`;
 
 		// Hufflepuff
 	} else if (
@@ -114,7 +114,7 @@ let apply = () => {
 		trait === "patient" ||
 		trait === "modest"
 	) {
-		response.textContent = `${name}, you'd be a great addition to Hufflepuff! 🦡 We'll be in touch with you soon.`;
+		response.textContent = `🦡 ${name}, you'd be a great addition to Hufflepuff! We'll be in touch with you soon.`;
 	}
 
 	// Underage

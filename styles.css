@@ -374,7 +374,6 @@ button:hover {
 .house-wrapper {
 	align-items: center;
 	justify-content: center;
-	display: none;
 	margin: 35px 10px 10px 10px;
 	flex-basis: 100%;
 }
@@ -399,10 +398,6 @@ button:hover {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-}
-
-.course-container p {
-	margin: 20px auto;
 }
 
 .course-heading {
@@ -458,6 +453,13 @@ button:hover {
 	font-size: 12px;
 	display: none;
 	margin: 0;
+}
+
+.course-note {
+	margin: 10px auto;
+	width: 80%;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.725);
 }
 
 .footer-container {
