@@ -148,3 +148,6 @@ let statusCheck = () => {
 };
 let statusBtn = document.getElementById("status-check-btn");
 statusBtn.addEventListener("click", statusCheck);
+
+// Add Hover to Mobile
+document.addEventListener("touchstart", function () {}, true);

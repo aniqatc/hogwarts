@@ -561,11 +561,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 730px) {
-	.course-listing:active:focus {
-		background: #121212;
-		font-weight: bold;
-		animation: color-changes 2s ease-in alternate-reverse infinite;
-	}
 	.course-listing:nth-last-child(2) {
 		grid-column-start: 2;
 		margin: 0 auto;
