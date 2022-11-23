@@ -23,6 +23,7 @@ let huffleContent = document.querySelector("#hufflepuff");
 let ravenContent = document.querySelector("#ravenclaw");
 let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
 
+// Gryffindor Card
 houseBtns[0].addEventListener("click", function () {
 	if (houseContent[0].style.display === "none") {
 		houseContent[0].style.display = "flex";
@@ -34,6 +35,7 @@ houseBtns[0].addEventListener("click", function () {
 	}
 });
 
+// Slytherin Card
 houseBtns[1].addEventListener("click", function () {
 	if (houseContent[1].style.display === "none") {
 		houseContent[1].style.display = "flex";
@@ -45,6 +47,7 @@ houseBtns[1].addEventListener("click", function () {
 	}
 });
 
+// Ravenclaw Card
 houseBtns[3].addEventListener("click", function () {
 	if (houseContent[3].style.display === "none") {
 		houseContent[3].style.display = "flex";
@@ -56,6 +59,7 @@ houseBtns[3].addEventListener("click", function () {
 	}
 });
 
+// Hufflepuff Card
 houseBtns[2].addEventListener("click", function () {
 	if (houseContent[2].style.display === "none") {
 		houseContent[2].style.display = "flex";
@@ -67,7 +71,7 @@ houseBtns[2].addEventListener("click", function () {
 	}
 });
 
-// FORM FUNCTIONALITY
+// Form Apply Functionality
 let apply = () => {
 	let name = document.querySelector("#name").value;
 	let age = document.querySelector("#age").value;
@@ -127,7 +131,7 @@ let apply = () => {
 let applyBtn = document.getElementById("apply-btn");
 applyBtn.addEventListener("click", apply);
 
-// Status
+// Form Status Functionality
 let statusCheck = () => {
 	let name = document.querySelector("#name").value;
 	let age = document.querySelector("#age").value;
@@ -151,4 +155,6 @@ statusBtn.addEventListener("click", statusCheck);
 
 // Add Hover to Mobile
 let courseListing = document.querySelector(".course-listing-container");
+let navButtons = document.querySelector(".hero-nav");
 courseListing.addEventListener("touchstart", function () {}, true);
+navButtons.addEventListener("touchstart", function () {}, true);

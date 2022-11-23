@@ -1,3 +1,4 @@
+/* Element Styling */
 body {
 	margin: 0;
 	background: rgba(246, 246, 246, 0.8);
@@ -28,11 +29,6 @@ h2 {
 	font-weight: bold;
 }
 
-h2,
-h3 {
-	font-family: "DM Sans", sans-serif;
-}
-
 h3 {
 	margin: 10px auto 20px auto;
 	font-weight: 600;
@@ -56,9 +52,10 @@ li {
 
 input {
 	margin: 10px auto;
+	padding: 0 10px;
 	display: block;
-	height: 30px;
-	width: 84%;
+	height: 35px;
+	width: 85%;
 	border-radius: 5px;
 	border: none;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
@@ -69,10 +66,6 @@ label {
 	font-weight: 500;
 }
 
-input {
-	padding: 0 10px;
-}
-
 button {
 	font-family: "DM Sans", sans-serif;
 	color: #121212;
@@ -81,6 +74,8 @@ button {
 button:hover {
 	cursor: pointer;
 }
+
+/* Hero Styling */
 
 .hero-container {
 	background: linear-gradient(
@@ -95,14 +90,7 @@ button:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-}
-
-.hero-desc {
-	width: 600px;
-	margin: 16px;
-	font-size: 15px;
 	text-align: center;
-	max-width: 100%;
 }
 
 .hero-nav {
@@ -135,6 +123,14 @@ button:hover {
 	display: block;
 }
 
+.hero-desc {
+	width: 580px;
+	margin: 16px;
+	font-size: 14px;
+	max-width: 100%;
+}
+
+/* House Toggle Section */
 .house-selection-container {
 	display: flex;
 	align-items: center;
@@ -150,7 +146,7 @@ button:hover {
 }
 
 .house-heading p {
-	width: 400px;
+	width: 500px;
 	margin: 0 auto;
 }
 
@@ -189,12 +185,6 @@ button:hover {
 	color: white;
 }
 
-.house-option:hover {
-	transform: scale(1.1);
-	filter: grayscale(0);
-	cursor: pointer;
-}
-
 .house-option img {
 	width: 250px;
 	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg)
@@ -211,6 +201,31 @@ button:hover {
 
 .house-option:hover li {
 	display: block;
+}
+
+.house-option:hover {
+	transform: scale(1.1);
+	filter: grayscale(0);
+	cursor: pointer;
+}
+
+#gryffindor-btn img {
+	filter: invert(47%) sepia(8%) saturate(2823%) hue-rotate(311deg)
+		brightness(107%) contrast(95%);
+}
+
+#slytherin-btn img {
+	filter: invert(30%) sepia(63%) saturate(3585%) hue-rotate(154deg)
+		brightness(84%) contrast(85%);
+}
+
+#ravenclaw-btn img {
+	filter: invert(42%) sepia(6%) saturate(5725%) hue-rotate(156deg)
+		brightness(98%) contrast(79%);
+}
+#hufflepuff-btn img {
+	filter: invert(71%) sepia(43%) saturate(507%) hue-rotate(12deg)
+		brightness(97%) contrast(86%);
 }
 
 #gryffindor-btn {
@@ -247,25 +262,7 @@ button:hover {
 	}
 }
 
-#gryffindor-btn img {
-	filter: invert(47%) sepia(8%) saturate(2823%) hue-rotate(311deg)
-		brightness(107%) contrast(95%);
-}
-
-#slytherin-btn img {
-	filter: invert(30%) sepia(63%) saturate(3585%) hue-rotate(154deg)
-		brightness(84%) contrast(85%);
-}
-
-#ravenclaw-btn img {
-	filter: invert(42%) sepia(6%) saturate(5725%) hue-rotate(156deg)
-		brightness(98%) contrast(79%);
-}
-#hufflepuff-btn img {
-	filter: invert(71%) sepia(43%) saturate(507%) hue-rotate(12deg)
-		brightness(97%) contrast(86%);
-}
-
+/* House Cards Expanded */
 .house-content-expanded {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(5px);
@@ -291,12 +288,20 @@ button:hover {
 	);
 }
 
+#gryffindor li {
+	background: #6e2427;
+}
+
 #slytherin .house-content-expanded {
 	background: linear-gradient(
 		180deg,
 		rgba(20, 79, 69, 0.9) 0%,
 		rgba(24, 66, 43, 0.9) 100%
 	);
+}
+
+#slytherin li {
+	background: #0a3122;
 }
 
 #ravenclaw .house-content-expanded {
@@ -307,6 +312,10 @@ button:hover {
 	);
 }
 
+#ravenclaw li {
+	background: #121555;
+}
+
 #hufflepuff .house-content-expanded {
 	background: linear-gradient(
 		179.97deg,
@@ -315,24 +324,45 @@ button:hover {
 	);
 }
 
-#gryffindor li {
-	background: #6e2427;
-}
-
-#slytherin li {
-	background: #0a3122;
-}
-
-#ravenclaw li {
-	background: #121555;
-}
-
 #hufflepuff li {
 	background: #6a5a17;
 }
 
+.house-wrapper {
+	align-items: center;
+	justify-content: center;
+	margin: 35px 10px 10px 10px;
+	flex-basis: 100%;
+}
+
+.house-desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.house-desc p {
+	width: 400px;
+	margin-top: 10px;
+}
+
+.house-desc img {
+	width: 350px;
+}
+
+/* Avatars in House Cards Expanded */
 .avatars {
 	text-align: center;
+}
+
+.avatars img {
+	transition: all 200ms ease-in;
+}
+
+.avatars img:hover {
+	transform: scale(1.2);
 }
 
 .raven-alumni {
@@ -363,36 +393,7 @@ button:hover {
 	margin: 5px 5px;
 }
 
-.avatars img {
-	transition: all 200ms ease-in;
-}
-
-.avatars img:hover {
-	transform: scale(1.2);
-}
-
-.house-wrapper {
-	align-items: center;
-	justify-content: center;
-	margin: 35px 10px 10px 10px;
-	flex-basis: 100%;
-}
-
-.house-desc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.house-desc p {
-	width: 400px;
-}
-
-.house-desc img {
-	width: 350px;
-}
-
+/* Course Listing Section */
 .course-container {
 	display: flex;
 	flex-direction: column;
@@ -404,6 +405,7 @@ button:hover {
 	text-align: center;
 	margin-bottom: 10px;
 }
+
 .course-listing-container {
 	display: grid;
 	grid-template-columns: repeat(5, auto);
@@ -428,6 +430,18 @@ button:hover {
 	transition: all 200ms ease-in;
 }
 
+.course-listing i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 7px;
+}
+
+.course-listing p {
+	font-size: 12px;
+	display: none;
+	margin: 0;
+}
+
 .course-listing:hover {
 	background: #121212;
 	font-weight: bold;
@@ -443,24 +457,14 @@ button:hover {
 	display: none;
 }
 
-.course-listing i {
-	display: block;
-	font-size: 26px;
-	margin-bottom: 7px;
-}
-
-.course-listing p {
-	font-size: 12px;
-	display: none;
-	margin: 0;
-}
-
 .course-note {
 	margin: 10px auto;
 	width: 80%;
 	font-size: 14px;
 	color: rgba(0, 0, 0, 0.725);
 }
+
+/* Footer Section & Credits */
 
 .footer-container {
 	display: flex;
@@ -472,6 +476,37 @@ button:hover {
 
 .footer-container h2 {
 	margin-bottom: 20px;
+}
+
+.credits {
+	margin: 50px;
+	font-size: 14px;
+}
+
+.credits a {
+	color: #0e136c;
+}
+
+.credits a:hover {
+	color: rgba(0, 0, 0, 0.65);
+}
+
+/* Footer: Form-Specific */
+.form-container {
+	background: rgba(21, 36, 59, 0.9);
+	border-radius: 8px;
+	color: white;
+	padding: 24px 50px;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.submission-response {
+	width: 300px;
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 4px;
+	border-radius: 4px;
 }
 
 #apply-btn,
@@ -501,36 +536,7 @@ button:hover {
 	transform: scale(1.08);
 }
 
-.form-container {
-	background: rgba(21, 36, 59, 0.9);
-	border-radius: 8px;
-	color: white;
-	padding: 24px 50px;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.submission-response {
-	width: 300px;
-	font-weight: 400;
-	font-size: 12px;
-	margin: 0 auto;
-	padding: 4px;
-	border-radius: 4px;
-}
-
-.credits {
-	margin: 50px;
-	font-size: 14px;
-}
-
-.credits a {
-	color: #0e136c;
-}
-
-.credits a:hover {
-	color: rgba(0, 0, 0, 0.65);
-}
-
+/* Hover Animation for Button & Cards */
 @keyframes color-changes {
 	0% {
 		color: #ffd700;
@@ -549,18 +555,44 @@ button:hover {
 	}
 }
 
+/* Media Queries */
 @media only screen and (max-width: 840px) {
-	.house-desc {
-		flex-wrap: wrap;
-		margin: 10px;
-	}
-
 	.course-listing-container {
 		grid-template-columns: repeat(auto-fit, 120px);
 	}
 }
 
 @media only screen and (max-width: 730px) {
+	h1 {
+		font-size: 72px;
+	}
+	h2 {
+		font-size: medium;
+	}
+	.hero-desc {
+		width: 80%;
+	}
+	.house-option,
+	.house-option img {
+		width: 90px;
+	}
+	.house-option {
+		padding: 15px 25px;
+	}
+	.house-option h3 {
+		font-size: 18px;
+	}
+	.house-option li {
+		margin: 6px auto;
+		font-size: 11.5px;
+	}
+	.house-option i {
+		display: block;
+		margin: 4px 0px;
+	}
+	.house-option:hover {
+		transform: scale(0.95);
+	}
 	.course-listing:nth-last-child(2) {
 		grid-column-start: 2;
 		margin: 0 auto;
@@ -569,34 +601,9 @@ button:hover {
 		grid-column-start: 3;
 		margin: 0 auto;
 	}
-	.house-option img {
-		width: 90px;
-	}
-	.house-option {
-		width: 90px;
-	}
-	.house-option h3 {
-		font-size: 20px;
-	}
-	.house-option li {
-		margin: 6px auto;
-	}
-
-	.house-option:hover {
-		transform: scale(0.97);
-	}
-	h1 {
-		font-size: 72px;
-	}
-	h2 {
-		font-size: medium;
-	}
 }
 
 @media only screen and (max-width: 600px) {
-	.hero-desc {
-		width: 90%;
-	}
 	.hero-nav {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -605,15 +612,18 @@ button:hover {
 		font-size: 20px;
 	}
 	.house-heading p {
-		width: 290px;
+		width: 80%;
+	}
+	.house-wrapper {
+		margin: 0px;
 	}
 	.house-content-expanded {
 		border-radius: 0;
 	}
-
 	.house-desc {
 		padding: 0;
 	}
+
 	.course-listing:nth-last-child(2) {
 		grid-column-start: 1;
 		grid-row-end: 2;
@@ -621,35 +631,19 @@ button:hover {
 	.course-listing:last-child {
 		grid-column-start: 2;
 	}
-	.house-wrapper {
-		/* display: flex; */
-		margin: 0px;
-	}
 }
 
 @media only screen and (max-width: 500px) {
 	h1 {
-		font-size: 60px;
+		font-size: 52px;
 	}
 
-	.house-desc img {
-		width: 260px;
-	}
-
-	.house-desc p {
-		width: 280px;
+	input {
+		width: 80%;
 	}
 
 	.house-option {
 		padding: 40px;
-	}
-
-	.raven-alumni,
-	.slyth-alumni,
-	.gryff-alumni,
-	.huffle-alumni {
-		width: 55px;
-		margin: 0;
 	}
 
 	.house-content-expanded {
@@ -660,19 +654,27 @@ button:hover {
 		line-height: 34px;
 	}
 
-	.course-listing-container {
-		grid-template-columns: repeat(auto-fit, 90px);
+	.house-desc img {
+		width: 260px;
 	}
 
-	.course-listing {
-		width: 90px;
-		height: 90px;
-		font-size: 15px;
+	.house-desc p {
+		width: 280px;
+	}
+	.raven-alumni,
+	.slyth-alumni,
+	.gryff-alumni,
+	.huffle-alumni {
+		width: 55px;
+		margin: 0;
 	}
 
+	.form-container {
+		padding: 20px;
+	}
 	#apply-btn,
 	#status-check-btn {
 		margin: 10px 0;
-		width: 90%;
+		width: 86%;
 	}
 }
