@@ -427,11 +427,6 @@ button:hover {
 	display: none;
 }
 
-.course-listing:hover i {
-	margin: 0;
-	font-size: 22px;
-}
-
 .course-listing i {
 	display: block;
 	font-size: 26px;
@@ -441,6 +436,7 @@ button:hover {
 .course-listing p {
 	font-size: 12px;
 	display: none;
+	margin: 0;
 }
 
 .footer-container {
@@ -607,7 +603,7 @@ select {
 
 @media only screen and (max-width: 500px) {
 	h1 {
-		font-size: 60px;
+		font-size: 56px;
 	}
 
 	.house-desc img {

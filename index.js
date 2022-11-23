@@ -1,3 +1,4 @@
+// TOGGLE BETWEEN DIFFERENT CONTENT DIVS
 let gryffBtn = document.querySelector("#gryffindor-btn");
 let slythBtn = document.querySelector("#slytherin-btn");
 let huffleBtn = document.querySelector("#hufflepuff-btn");
@@ -64,3 +65,5 @@ expandAll.addEventListener("click", function () {
 		}
 	});
 });
+
+// FORM FUNCTIONALITY
