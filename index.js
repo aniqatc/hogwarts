@@ -160,7 +160,7 @@ let statusCheck = () => {
 let statusBtn = document.getElementById("status-check-btn");
 statusBtn.addEventListener("click", statusCheck);
 
-// Add Hover to Mobile
+// Add Hover Functionality for Mobile
 let courseListing = document.querySelector(".course-listing-container");
 let navButtons = document.querySelector(".hero-nav");
 courseListing.addEventListener("touchstart", function () {}, true);
