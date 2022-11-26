@@ -1,8 +1,8 @@
 /* Element Styling */
 body {
-	margin: 0;
 	background: rgba(246, 246, 246, 0.8);
 	font-family: "DM Sans", sans-serif;
+	margin: 0;
 }
 
 section {
@@ -30,14 +30,14 @@ h2 {
 }
 
 h3 {
-	margin: 10px auto 20px auto;
 	font-weight: 600;
 	font-size: 30px;
+	margin: 10px auto 20px auto;
 }
 
 a {
-	text-decoration: none;
 	color: #121212;
+	text-decoration: none;
 }
 
 ul {
@@ -45,20 +45,20 @@ ul {
 }
 
 li {
-	list-style-type: none;
 	font-size: small;
+	list-style-type: none;
 	text-transform: uppercase;
 }
 
 input {
-	margin: 10px auto;
-	padding: 0 10px;
-	display: block;
-	height: 35px;
-	width: 85%;
 	border-radius: 5px;
 	border: none;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+	display: block;
+	height: 35px;
+	margin: 10px auto;
+	padding: 0 10px;
+	width: 85%;
 }
 
 label {
@@ -67,8 +67,8 @@ label {
 }
 
 button {
-	font-family: "DM Sans", sans-serif;
 	color: #121212;
+	font-family: "DM Sans", sans-serif;
 }
 
 button:hover {
@@ -78,6 +78,7 @@ button:hover {
 /* Hero Styling */
 
 .hero-container {
+	align-items: center;
 	background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.257),
@@ -88,7 +89,6 @@ button:hover {
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 	text-align: center;
 }
@@ -98,87 +98,87 @@ button:hover {
 }
 
 .hero-nav button {
-	width: 100px;
-	height: 100px;
-	margin: 10px;
 	border-radius: 10px;
 	border: 1px solid #aeaeae;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
 	background: transparent;
 	backdrop-filter: blur(6px);
-	padding: 10px;
 	font-weight: 500;
+	height: 100px;
+	margin: 10px;
+	padding: 10px;
 	transition: all 200ms ease-in-out;
+	width: 100px;
 }
 
 .hero-nav button:hover {
-	background: #121212;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
 	transform: scale(1.08);
 }
 
 .hero-nav i {
+	display: block;
 	font-size: 28px;
 	margin-bottom: 5px;
-	display: block;
 }
 
 .hero-desc {
-	width: 580px;
-	margin: 16px;
 	font-size: 14px;
+	margin: 16px;
 	max-width: 100%;
+	width: 580px;
 }
 
 /* House Toggle Section */
 .house-selection-container {
-	display: flex;
 	align-items: center;
-	justify-content: center;
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	text-align: center;
 }
 
 .house-heading {
-	flex-basis: 100%;
 	align-self: flex-end;
+	flex-basis: 100%;
 	margin: 15px auto;
 }
 
 .house-heading p {
-	width: 500px;
 	margin: 0 auto;
+	width: 500px;
 }
 
 .expand-houses {
-	flex-basis: 100%;
-	margin: 15px auto;
-	padding: 10px 25px;
-	font-weight: 600;
 	border-radius: 10px;
 	border: none;
 	border: 1px solid #aeaeae;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	flex-basis: 100%;
+	font-weight: 600;
+	margin: 15px auto;
+	padding: 10px 25px;
 }
 
 .expand-houses:hover {
-	background: #121212;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
 	transform: scale(1.08);
 }
 
 .house-option {
+	align-self: flex-start;
+	animation: house-bg 25s ease-in alternate-reverse infinite;
 	border: 1px solid;
-	color: white;
-	margin: 10px;
-	padding: 20px 30px;
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.257);
 	border-radius: 10px;
 	border: none;
-	transition: all 150ms ease-in;
-	animation: house-bg 25s ease-in alternate-reverse infinite;
+	color: white;
 	filter: grayscale(0.6);
-	align-self: flex-start;
+	margin: 10px;
+	padding: 20px 30px;
+	transition: all 150ms ease-in;
 }
 
 .house-option a {
@@ -186,17 +186,17 @@ button:hover {
 }
 
 .house-option img {
-	width: 250px;
 	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg)
 		brightness(107%) contrast(105%);
+	width: 250px;
 }
 
 .house-option li {
-	display: none;
+	border-radius: 10px;
 	background: rgba(0, 0, 0, 0.6);
+	display: none;
 	margin: 4px 40px;
 	padding: 2px 5px;
-	border-radius: 10px;
 }
 
 .house-option:hover li {
@@ -204,9 +204,9 @@ button:hover {
 }
 
 .house-option:hover {
-	transform: scale(1.1);
-	filter: grayscale(0);
 	cursor: pointer;
+	filter: grayscale(0);
+	transform: scale(1.1);
 }
 
 #gryffindor-btn img {
@@ -267,16 +267,16 @@ button:hover {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(5px);
 	border-radius: 10px;
-	padding: 15px 30px;
 	color: white;
+	padding: 15px 30px;
 	text-align: center;
 }
 
 .house-content-expanded li {
-	display: inline;
-	padding: 5px 10px;
 	border-radius: 20px;
+	display: inline;
 	font-weight: 500;
+	padding: 5px 10px;
 	text-transform: capitalize;
 }
 
@@ -330,22 +330,22 @@ button:hover {
 
 .house-wrapper {
 	align-items: center;
+	flex-basis: 100%;
 	justify-content: center;
 	margin: 35px 10px 10px 10px;
-	flex-basis: 100%;
 }
 
 .house-desc {
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	text-align: center;
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
 }
 
 .house-desc p {
-	width: 400px;
 	margin-top: 10px;
+	width: 400px;
 }
 
 .house-desc img {
@@ -365,32 +365,29 @@ button:hover {
 	transform: scale(1.2);
 }
 
-.raven-alumni {
-	width: 75px;
-	border: 7px solid #0e136c;
+.raven-alumni,
+.slyth-alumni,
+.gryff-alumni,
+.huffle-alumni {
 	border-radius: 50px;
 	margin: 5px 5px;
+	width: 75px;
+}
+
+.raven-alumni {
+	border: 7px solid #0e136c;
 }
 
 .slyth-alumni {
-	width: 75px;
 	border: 7px solid #0a3122;
-	border-radius: 50px;
-	margin: 5px 5px;
 }
 
 .gryff-alumni {
-	width: 75px;
 	border: 7px solid #891b1e;
-	border-radius: 50px;
-	margin: 5px 5px;
 }
 
 .huffle-alumni {
-	width: 75px;
 	border: 7px solid #947c19;
-	border-radius: 50px;
-	margin: 5px 5px;
 }
 
 /* Course Listing Section */
@@ -402,8 +399,8 @@ button:hover {
 }
 
 .course-heading {
-	text-align: center;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .course-listing-container {
@@ -411,8 +408,8 @@ button:hover {
 	grid-template-columns: repeat(5, auto);
 	align-items: center;
 	justify-content: center;
-	gap: 25px;
 	margin: 20px;
+	gap: 25px;
 }
 
 .course-listing {
@@ -422,12 +419,12 @@ button:hover {
 	border: 1px solid #aeaeae;
 	border-radius: 10px;
 	background: transparent;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	height: 120px;
 	text-align: center;
 	padding: 5px;
-	width: 120px;
-	height: 120px;
-	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
 	transition: all 200ms ease-in;
+	width: 120px;
 }
 
 .course-listing i {
@@ -443,10 +440,10 @@ button:hover {
 }
 
 .course-listing:hover {
-	background: #121212;
-	font-weight: bold;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
 	cursor: pointer;
+	font-weight: bold;
 }
 
 .course-listing:hover p {
@@ -458,19 +455,19 @@ button:hover {
 }
 
 .course-note {
+	color: rgba(0, 0, 0, 0.725);
+	font-size: 14px;
 	margin: 10px auto;
 	width: 80%;
-	font-size: 14px;
-	color: rgba(0, 0, 0, 0.725);
 }
 
 /* Footer Section & Credits */
 
 .footer-container {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	text-align: center;
 }
 
@@ -479,8 +476,8 @@ button:hover {
 }
 
 .credits {
-	margin: 50px;
 	font-size: 14px;
+	margin: 50px;
 }
 
 .credits a {
@@ -495,33 +492,33 @@ button:hover {
 .form-container {
 	background: rgba(21, 36, 59, 0.9);
 	border-radius: 8px;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 	color: white;
 	padding: 24px 50px;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .submission-response {
-	width: 315px;
 	font-weight: 400;
 	font-size: 12px;
 	margin: 0 auto;
 	padding: 4px;
+	width: 315px;
 }
 
 #apply-btn,
 #status-check-btn {
-	font-weight: 600;
-	margin: 10px;
-	width: 150px;
-	padding: 14px 20px;
 	border-radius: 10px;
 	border: none;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	font-weight: 600;
+	margin: 10px;
+	padding: 14px 20px;
+	width: 150px;
 }
 
 #apply-btn {
-	background: rgba(149, 101, 26, 0.9);
 	color: rgb(238, 238, 238);
+	background: rgba(149, 101, 26, 0.9);
 }
 
 #status-check-btn {
@@ -530,8 +527,8 @@ button:hover {
 
 #apply-btn:hover,
 #status-check-btn:hover {
-	background: #121212;
 	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
 	transform: scale(1.08);
 }
 
