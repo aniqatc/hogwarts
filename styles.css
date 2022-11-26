@@ -501,12 +501,11 @@ button:hover {
 }
 
 .submission-response {
-	width: 300px;
+	width: 315px;
 	font-weight: 400;
 	font-size: 12px;
 	margin: 0 auto;
 	padding: 4px;
-	border-radius: 4px;
 }
 
 #apply-btn,
@@ -671,6 +670,10 @@ button:hover {
 
 	.form-container {
 		padding: 20px;
+	}
+
+	.submission-response {
+		width: 280px;
 	}
 	#apply-btn,
 	#status-check-btn {

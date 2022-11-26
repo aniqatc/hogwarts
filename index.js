@@ -123,13 +123,13 @@ let apply = () => {
 	}
 
 	// Underage
-	if (
+	else if (
 		(age <= 10 && house === "hufflepuff") ||
 		house === "gryffindor" ||
 		house === "ravenclaw" ||
 		house === "slytherin"
 	) {
-		response.textContent = `🚨 Sorry, you are not qualified. Please try again when you reach your 11th birthday!`;
+		response.textContent = `🎂 Sorry, you are not qualified. Please try again when you reach your 11th birthday!`;
 	} else {
 		response.textContent = `🚨 Sorry, you have not provided enough information.`;
 	}
@@ -148,11 +148,11 @@ let statusCheck = () => {
 	applied = applied.toLowerCase().trim();
 
 	if (age >= 11 && applied === "yes") {
-		response.textContent = `Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions. 🦉`;
+		response.textContent = `🦉 Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions.`;
 	} else if ((age <= 11 && applied === "no") || applied === "yes") {
-		response.textContent = `Unfortunately, you're not old enough, ${name}. Please check back in once you've turned 11. 🎂`;
+		response.textContent = `🎂 Unfortunately, you're not old enough, ${name}. Please check back in once you've turned 11. `;
 	} else if (age >= 11 && applied === "no") {
-		response.textContent = `You are qualified to apply, ${name}!`;
+		response.textContent = `🪄 You are qualified to apply, ${name}!`;
 	} else {
 		response.textContent = `🚨 Sorry, you have not provided enough information.`;
 	}
