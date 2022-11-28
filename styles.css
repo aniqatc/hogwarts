@@ -553,6 +553,10 @@ button:hover {
 
 /* Media Queries */
 @media only screen and (max-width: 840px) {
+	.house-option,
+	.house-option img {
+		width: 200px;
+	}
 	.course-listing-container {
 		grid-template-columns: repeat(auto-fit, 120px);
 	}
@@ -570,21 +574,21 @@ button:hover {
 	}
 	.house-option,
 	.house-option img {
-		width: 90px;
+		width: 120px;
 	}
 	.house-option {
-		padding: 15px 25px;
+		padding: 30px;
+		width: 150px;
 	}
 	.house-option h3 {
 		font-size: 18px;
 	}
 	.house-option li {
 		margin: 6px auto;
-		font-size: 11.5px;
+		font-size: 12px;
 	}
 	.house-option i {
-		display: block;
-		margin: 4px 0px;
+		margin: 0px 2px;
 	}
 	.house-option:hover {
 		transform: scale(0.95);
@@ -636,10 +640,6 @@ button:hover {
 
 	input {
 		width: 80%;
-	}
-
-	.house-option {
-		padding: 40px;
 	}
 
 	.house-content-expanded {

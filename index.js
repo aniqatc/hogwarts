@@ -27,9 +27,8 @@ let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
 houseBtns[0].addEventListener("click", function () {
 	if (houseContent[0].style.display === "none") {
 		houseContent[0].style.display = "flex";
-		houseContent[1].style.display = "none";
-		houseContent[2].style.display = "none";
-		houseContent[3].style.display = "none";
+		let remainingContent = houseContent.slice(1);
+		remainingContent.forEach((el) => (el.style.display = "none"));
 	} else {
 		houseContent[0].style.display = "none";
 	}
@@ -47,18 +46,6 @@ houseBtns[1].addEventListener("click", function () {
 	}
 });
 
-// Ravenclaw Card
-houseBtns[3].addEventListener("click", function () {
-	if (houseContent[3].style.display === "none") {
-		houseContent[3].style.display = "flex";
-		houseContent[0].style.display = "none";
-		houseContent[1].style.display = "none";
-		houseContent[2].style.display = "none";
-	} else {
-		houseContent[3].style.display = "none";
-	}
-});
-
 // Hufflepuff Card
 houseBtns[2].addEventListener("click", function () {
 	if (houseContent[2].style.display === "none") {
@@ -68,6 +55,18 @@ houseBtns[2].addEventListener("click", function () {
 		houseContent[3].style.display = "none";
 	} else {
 		houseContent[2].style.display = "none";
+	}
+});
+
+// Ravenclaw Card
+houseBtns[3].addEventListener("click", function () {
+	if (houseContent[3].style.display === "none") {
+		houseContent[3].style.display = "flex";
+		houseContent[0].style.display = "none";
+		houseContent[1].style.display = "none";
+		houseContent[2].style.display = "none";
+	} else {
+		houseContent[3].style.display = "none";
 	}
 });
 
