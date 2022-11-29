@@ -152,7 +152,6 @@ button:hover {
 
 .expand-houses {
 	border-radius: 10px;
-	border: none;
 	border: 1px solid #aeaeae;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
 	flex-basis: 100%;
@@ -170,10 +169,8 @@ button:hover {
 .house-option {
 	align-self: flex-start;
 	animation: house-bg 25s ease-in alternate-reverse infinite;
-	border: 1px solid;
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.257);
 	border-radius: 10px;
-	border: none;
 	color: white;
 	filter: grayscale(0.6);
 	margin: 10px;
@@ -206,7 +203,7 @@ button:hover {
 .house-option:hover {
 	cursor: pointer;
 	filter: grayscale(0);
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 
 #gryffindor-btn img {
@@ -332,7 +329,8 @@ button:hover {
 	align-items: center;
 	flex-basis: 100%;
 	justify-content: center;
-	margin: 35px 10px 10px 10px;
+	min-width: 100vw;
+	min-height: 100vh;
 }
 
 .house-desc {
@@ -589,9 +587,6 @@ button:hover {
 	}
 	.house-option i {
 		margin: 0px 2px;
-	}
-	.house-option:hover {
-		transform: scale(0.95);
 	}
 	.course-listing:nth-last-child(2) {
 		grid-column-start: 2;
