@@ -38,9 +38,10 @@ houseBtns[0].addEventListener("click", function () {
 houseBtns[1].addEventListener("click", function () {
 	if (houseContent[1].style.display === "none") {
 		houseContent[1].style.display = "flex";
-		houseContent[0].style.display = "none";
-		houseContent[2].style.display = "none";
-		houseContent[3].style.display = "none";
+		for (let i = 0; i < houseContent.length; i++) {
+			if (i === 1) continue;
+			houseContent[i].style.display = "none";
+		}
 	} else {
 		houseContent[1].style.display = "none";
 	}
@@ -50,9 +51,10 @@ houseBtns[1].addEventListener("click", function () {
 houseBtns[2].addEventListener("click", function () {
 	if (houseContent[2].style.display === "none") {
 		houseContent[2].style.display = "flex";
-		houseContent[0].style.display = "none";
-		houseContent[1].style.display = "none";
-		houseContent[3].style.display = "none";
+		for (let i = 0; i < houseContent.length; i++) {
+			if (i === 2) continue;
+			houseContent[i].style.display = "none";
+		}
 	} else {
 		houseContent[2].style.display = "none";
 	}
@@ -62,9 +64,10 @@ houseBtns[2].addEventListener("click", function () {
 houseBtns[3].addEventListener("click", function () {
 	if (houseContent[3].style.display === "none") {
 		houseContent[3].style.display = "flex";
-		houseContent[0].style.display = "none";
-		houseContent[1].style.display = "none";
-		houseContent[2].style.display = "none";
+		for (let i = 0; i < houseContent.length; i++) {
+			if (i === 3) continue;
+			houseContent[i].style.display = "none";
+		}
 	} else {
 		houseContent[3].style.display = "none";
 	}
