@@ -550,11 +550,6 @@ button:hover {
 }
 
 /* Media Queries */
-@media only screen and (min-width: 1800px) {
-	house-wrapper {
-		flex-basis: auto;
-	}
-}
 
 @media only screen and (max-width: 840px) {
 	.house-option,
