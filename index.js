@@ -1,3 +1,38 @@
+/* SMOOTH SCROLLING */
+const links = document.querySelectorAll("a:not(.social-links)");
+
+links.forEach(function (link) {
+	link.addEventListener("click", function (el) {
+		el.preventDefault();
+		/* LINKS */
+		const href = link.getAttribute("href");
+		if (href !== "#" && href.startsWith("#")) {
+			const sectionElement = document.querySelector(href);
+			sectionElement.scrollIntoView({ behavior: "smooth" });
+		}
+	});
+});
+
+/* STICKY NAV */
+const navElement = document.querySelector(".hero-container");
+const navObserver = new IntersectionObserver(
+	function (entries) {
+		const ent = entries[0];
+		if (ent.isIntersecting !== true) {
+			navElement.classList.add("sticky");
+		} else {
+			navElement.classList.remove("sticky");
+		}
+	},
+	{
+		root: null,
+		threshold: 0.5,
+		rootMargin: "100px",
+	}
+);
+
+navObserver.observe(navElement);
+
 // EXPAND ALL HOUSE CARD DETAILS
 let expandAll = document.querySelector(".expand-houses");
 expandAll.addEventListener("click", function () {

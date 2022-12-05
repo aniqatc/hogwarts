@@ -102,7 +102,7 @@ button:hover {
 	border: 1px solid #aeaeae;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
 	background: transparent;
-	backdrop-filter: blur(6px);
+	backdrop-filter: blur(8px);
 	font-weight: 500;
 	height: 100px;
 	margin: 10px;
@@ -111,10 +111,16 @@ button:hover {
 	width: 100px;
 }
 
-.hero-nav button:hover {
-	animation: color-changes 2s ease-in alternate-reverse infinite;
-	background: #121212;
-	transform: scale(1.08);
+.sticky .hero-nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: table;
+	z-index: 100;
+}
+
+.sticky .hero-nav button {
+	background: rgba(255, 255, 255, 0.689);
 }
 
 .hero-nav i {
@@ -130,8 +136,23 @@ button:hover {
 	width: 580px;
 }
 
+.hero-nav button:hover {
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	transform: scale(1.08);
+	background: #121212;
+}
+
 /* House Toggle Section */
 .house-selection-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.toggle-wrapper {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
@@ -140,21 +161,18 @@ button:hover {
 }
 
 .house-heading {
-	align-self: flex-end;
-	flex-basis: 100%;
 	margin: 15px auto;
 }
 
 .house-heading p {
-	margin: 0 auto;
 	width: 500px;
+	margin: 0 auto;
 }
 
 .expand-houses {
 	border-radius: 10px;
 	border: 1px solid #aeaeae;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
-	flex-basis: 100%;
 	font-weight: 600;
 	margin: 15px auto;
 	padding: 10px 25px;
@@ -167,7 +185,6 @@ button:hover {
 }
 
 .house-option {
-	align-self: flex-start;
 	animation: house-bg 25s ease-in alternate-reverse infinite;
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.257);
 	border-radius: 10px;
@@ -176,10 +193,6 @@ button:hover {
 	margin: 10px;
 	padding: 20px 30px;
 	transition: all 150ms ease-in;
-}
-
-.house-option a {
-	color: white;
 }
 
 .house-option img {
@@ -267,6 +280,7 @@ button:hover {
 	color: white;
 	padding: 15px 30px;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .house-content-expanded li {
@@ -475,7 +489,7 @@ button:hover {
 
 .credits {
 	font-size: 14px;
-	margin: 50px;
+	margin: 40px auto 140px;
 }
 
 .credits a {
@@ -600,13 +614,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-	.hero-nav {
-		display: grid;
-		grid-template-columns: repeat(2, auto);
-	}
-	.hero-nav i {
-		font-size: 20px;
-	}
 	.house-heading p {
 		width: 80%;
 	}
@@ -638,6 +645,15 @@ button:hover {
 		width: 80%;
 	}
 
+	.hero-nav button {
+		width: 80px;
+		height: 80px;
+	}
+
+	.hero-nav i {
+		font-size: 20px;
+	}
+
 	.house-content-expanded {
 		padding: 10px 6px;
 	}
@@ -661,10 +677,6 @@ button:hover {
 		margin: 0;
 	}
 
-	.form-container {
-		padding: 20px;
-	}
-
 	.submission-response {
 		width: 280px;
 	}
@@ -672,5 +684,24 @@ button:hover {
 	#status-check-btn {
 		margin: 10px 0;
 		width: 86%;
+	}
+
+	.form-container {
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.hero-nav button {
+		width: 65px;
+		height: 65px;
+		font-size: 12px;
+		margin: 3px;
+		padding: 0;
+	}
+
+	.hero-nav i {
+		font-size: 14px;
 	}
 }
