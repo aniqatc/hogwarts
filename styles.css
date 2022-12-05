@@ -111,18 +111,6 @@ button:hover {
 	width: 100px;
 }
 
-.sticky .hero-nav {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	display: table;
-	z-index: 100;
-}
-
-.sticky .hero-nav button {
-	background: rgba(255, 255, 255, 0.689);
-}
-
 .hero-nav i {
 	display: block;
 	font-size: 28px;
@@ -134,6 +122,19 @@ button:hover {
 	margin: 16px;
 	max-width: 100%;
 	width: 580px;
+}
+
+.sticky .hero-nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: table;
+	z-index: 100;
+	margin-bottom: 8px;
+}
+
+.sticky .hero-nav button {
+	background: rgba(255, 255, 255, 0.689);
 }
 
 .hero-nav button:hover {
@@ -688,20 +689,16 @@ button:hover {
 
 	.form-container {
 		padding: 20px;
-		width: 100%;
+		width: 80%;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	.hero-nav button {
-		width: 65px;
-		height: 65px;
+		width: 80px;
+		height: 80px;
 		font-size: 12px;
-		margin: 3px;
-		padding: 0;
-	}
-
-	.hero-nav i {
-		font-size: 14px;
+		margin: 2px;
+		padding: 3px;
 	}
 }
