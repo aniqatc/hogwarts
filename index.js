@@ -58,55 +58,14 @@ let huffleContent = document.querySelector("#hufflepuff");
 let ravenContent = document.querySelector("#ravenclaw");
 let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
 
-// Gryffindor Card
-houseBtns[0].addEventListener("click", function () {
-	if (houseContent[0].style.display === "none") {
-		houseContent[0].style.display = "flex";
-		let remainingContent = houseContent.slice(1);
-		remainingContent.forEach((el) => (el.style.display = "none"));
-	} else {
-		houseContent[0].style.display = "none";
-	}
-});
-
-// Slytherin Card
-houseBtns[1].addEventListener("click", function () {
-	if (houseContent[1].style.display === "none") {
-		houseContent[1].style.display = "flex";
-		for (let i = 0; i < houseContent.length; i++) {
-			if (i === 1) continue;
-			houseContent[i].style.display = "none";
+for (let i = 0; i < houseBtns.length; i++) {
+	houseBtns[i].addEventListener("click", function () {
+		for (let a = 0; a < houseContent.length; a++) {
+			houseContent[a].style.display = "none";
 		}
-	} else {
-		houseContent[1].style.display = "none";
-	}
-});
-
-// Hufflepuff Card
-houseBtns[2].addEventListener("click", function () {
-	if (houseContent[2].style.display === "none") {
-		houseContent[2].style.display = "flex";
-		for (let i = 0; i < houseContent.length; i++) {
-			if (i === 2) continue;
-			houseContent[i].style.display = "none";
-		}
-	} else {
-		houseContent[2].style.display = "none";
-	}
-});
-
-// Ravenclaw Card
-houseBtns[3].addEventListener("click", function () {
-	if (houseContent[3].style.display === "none") {
-		houseContent[3].style.display = "flex";
-		for (let i = 0; i < houseContent.length; i++) {
-			if (i === 3) continue;
-			houseContent[i].style.display = "none";
-		}
-	} else {
-		houseContent[3].style.display = "none";
-	}
-});
+		houseContent[i].style.display = "flex";
+	});
+}
 
 // Form Apply Functionality
 let apply = () => {
