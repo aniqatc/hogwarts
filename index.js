@@ -112,15 +112,18 @@ houseBtns[3].addEventListener("click", function () {
 let apply = () => {
 	let name = document.querySelector("#name").value;
 	let age = document.querySelector("#age").value;
-	let house = document.querySelector("#house").value;
 	let trait = document.querySelector("#trait").value;
 	let response = document.querySelector(".submission-response");
 
-	house = house.toLowerCase().trim();
 	trait = trait.toLowerCase().trim();
 
-	if (
-		(age >= 11 && house === "ravenclaw" && trait === "clever") ||
+	// Underage
+	if (age < 11 && age > 0) {
+		response.textContent = `🎂 Sorry, you are not qualified. Please try again when you reach your 11th birthday!`;
+
+		// Ravenclaw
+	} else if (
+		(age >= 11 && trait === "clever") ||
 		trait === "creative" ||
 		trait === "witty" ||
 		trait === "curious" ||
@@ -130,7 +133,7 @@ let apply = () => {
 
 		// Slytherin
 	} else if (
-		(age >= 11 && house === "slytherin" && trait === "ambitious") ||
+		(age >= 11 && trait === "ambitious") ||
 		trait === "cunning" ||
 		trait === "pride" ||
 		trait === "leadership" ||
@@ -140,7 +143,7 @@ let apply = () => {
 
 		// Gryffindor
 	} else if (
-		(age >= 11 && house === "gryffindor" && trait === "brave") ||
+		(age >= 11 && trait === "brave") ||
 		trait === "determination" ||
 		trait === "adventurous" ||
 		trait === "idealistic" ||
@@ -150,24 +153,15 @@ let apply = () => {
 
 		// Hufflepuff
 	} else if (
-		(age >= 11 && house === "hufflepuff" && trait === "dedicated") ||
+		(age >= 11 && trait === "dedicated") ||
 		trait === "hardworking" ||
 		trait === "loyal" ||
 		trait === "patient" ||
 		trait === "modest"
 	) {
 		response.textContent = `🦡 ${name}, you'd be a great addition to Hufflepuff! We'll be in touch with you soon.`;
-	}
-
-	// Underage
-	else if (
-		(age <= 10 && house === "hufflepuff") ||
-		house === "gryffindor" ||
-		house === "ravenclaw" ||
-		house === "slytherin"
-	) {
-		response.textContent = `🎂 Sorry, you are not qualified. Please try again when you reach your 11th birthday!`;
 	} else {
+		// Empty Responses
 		response.textContent = `🚨 Sorry, you have not provided enough information.`;
 	}
 };

@@ -384,11 +384,39 @@
 						>How old are you? <input type="number" placeholder="12" id="age"
 					/></label>
 					<label for="house"> Which House would you like to join?</label>
-					<input type="text" placeholder="Gryffindor" id="house" />
+					<select name="house" id="house">
+						<option value="">Choose One</option>
+						<option value="Gryffindor">Gryffindor</option>
+						<option value="Slytherin">Slytherin</option>
+						<option value="Ravenclaw">Ravenclaw</option>
+						<option value="Hufflepuff">Hufflepuff</option>
+					</select>
 					<label for="trait"
 						>What is <b>one</b> trait that best describes you?
-						<input type="text" placeholder="Brave" id="trait"
-					/></label>
+						<select name="trait" id="trait">
+							<option value="">Choose One</option>
+							<option value="Idealistic">Idealistic</option>
+							<option value="Ambitious">Ambitious</option>
+							<option value="Observant">Observant</option>
+							<option value="Curious">Curious</option>
+							<option value="Creative">Creative</option>
+							<option value="Patient">Patient</option>
+							<option value="Modest">Modest</option>
+							<option value="Cunning">Cunning</option>
+							<option value="Daring">Daring</option>
+							<option value="Adventurous">Adventurous</option>
+							<option value="Pride">Pride</option>
+							<option value="Witty">Witty</option>
+							<option value="Clever">Clever</option>
+							<option value="Determination">Determination</option>
+							<option value="Brave">Brave</option>
+							<option value="Loyal">Loyal</option>
+							<option value="Hardworking">Hardworking</option>
+							<option value="Leadership">Leadership</option>
+							<option value="Competitive">Competitive</option>
+							<option value="Dedicated">Dedicated</option>
+						</select>
+					</label>
 					<label for="applied"
 						>Have you applied before?
 						<input type="text" placeholder="Yes or No" id="applied"
