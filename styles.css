@@ -588,7 +588,12 @@ button:hover {
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 860px) {
+	.toggle-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
+
 	.course-listing-container {
 		grid-template-columns: repeat(auto-fit, 120px);
 	}
@@ -604,6 +609,18 @@ button:hover {
 	.hero-desc {
 		width: 80%;
 	}
+
+	.course-listing:nth-last-child(2) {
+		grid-column-start: 2;
+		margin: 0 auto;
+	}
+	.course-listing:last-child {
+		grid-column-start: 3;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
 	.house-option,
 	.house-option img {
 		width: 120px;
@@ -622,17 +639,6 @@ button:hover {
 	.house-option i {
 		margin: 0px 2px;
 	}
-	.course-listing:nth-last-child(2) {
-		grid-column-start: 2;
-		margin: 0 auto;
-	}
-	.course-listing:last-child {
-		grid-column-start: 3;
-		margin: 0 auto;
-	}
-}
-
-@media only screen and (max-width: 600px) {
 	.house-heading p {
 		width: 80%;
 	}
@@ -666,6 +672,9 @@ button:hover {
 
 	select {
 		width: 85%;
+	}
+	.toggle-wrapper {
+		grid-template-columns: auto;
 	}
 	.hero-nav button {
 		width: 80px;
