@@ -589,11 +589,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 900px) {
-	.toggle-wrapper {
-		display: grid;
-		grid-template-columns: repeat(2, auto);
-	}
-
 	.course-listing-container {
 		grid-template-columns: repeat(auto-fit, 120px);
 	}
