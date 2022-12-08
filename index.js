@@ -27,7 +27,6 @@ const navObserver = new IntersectionObserver(
 	{
 		root: null,
 		threshold: 0.5,
-		rootMargin: "100px",
 	}
 );
 

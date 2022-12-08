@@ -144,9 +144,9 @@ button:hover {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	display: table;
 	z-index: 100;
 	margin-bottom: 8px;
+	justify-content: center;
 }
 
 .sticky .hero-nav button {
@@ -673,9 +673,6 @@ button:hover {
 	select {
 		width: 85%;
 	}
-	.toggle-wrapper {
-		grid-template-columns: auto;
-	}
 	.hero-nav button {
 		width: 80px;
 		height: 80px;
@@ -730,5 +727,9 @@ button:hover {
 		font-size: 12px;
 		margin: 2px;
 		padding: 3px;
+	}
+
+	.toggle-wrapper {
+		grid-template-columns: auto;
 	}
 }
