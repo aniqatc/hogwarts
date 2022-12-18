@@ -5,7 +5,7 @@ A landing page about the fictional institution, Hogwarts, from the Harry Potter 
 <img src="https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png" width="20px">  <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="20px"> <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="20px">  <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="20px">
 
 # Key Features
-Despite having no real purpose and being my first landing page project, it was meant to be mainly HTML & CSS. But I came back to it (after I had learned more concepts) to make it better visually and functionally. Here are some the key features I added and the things I improved from the original version:
+Despite having no real purpose and being one of my first landing page projects, it was meant to be mainly HTML & CSS. But I came back to it (after I had learned more concepts) to make it better visually and functionally. Here are some the key features I added and the things I improved from the original version:
 - Fully responsive layout
 - Overlaying text on an element that only appears on `:hover` (Section: Courses)
 - Used a responsive grid for the Course section and media queries with `grid-column` and `nth-child()` to target last two child items to center align them in smaller screens
