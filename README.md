@@ -23,5 +23,3 @@ Despite having no real purpose and being one of my first landing page projects, 
 # Preview
 <a href="https://hogwarts.aniqa.dev" target="_blank">
 <img src="https://github.com/aniqatc/hogwarts/blob/main/assets/preview.gif?raw=true" style="max-width:100%;"></a>
-
-# <a href="https://www.aniqa.io/hogwarts-reflection" target="_blank">Reflection</a>
