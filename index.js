@@ -1,16 +1,11 @@
 /* SMOOTH SCROLLING */
-const links = document.querySelectorAll('a:not(.social-links)');
+const links = document.querySelectorAll('.hero-nav a');
+const navContainer = document.querySelector('.hero-nav');
 
-links.forEach(function (link) {
-	link.addEventListener('click', function (el) {
-		el.preventDefault();
-		/* LINKS */
-		const href = link.getAttribute('href');
-		if (href !== '#' && href.startsWith('#')) {
-			const sectionElement = document.querySelector(href);
-			sectionElement.scrollIntoView({ behavior: 'smooth' });
-		}
-	});
+navContainer.addEventListener('click', event => {
+	event.preventDefault();
+	const href = event.target.closest('a').getAttribute('href');
+	document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
 });
 
 /* STICKY NAV */
