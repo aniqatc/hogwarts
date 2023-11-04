@@ -12,12 +12,9 @@ navContainer.addEventListener('click', event => {
 const navElement = document.querySelector('.hero-container');
 const navObserver = new IntersectionObserver(
 	function (entries) {
-		const ent = entries[0];
-		if (ent.isIntersecting !== true) {
-			navElement.classList.add('sticky');
-		} else {
-			navElement.classList.remove('sticky');
-		}
+		entries[0].isIntersecting !== true
+			? navElement.classList.add('sticky')
+			: navElement.classList.remove('sticky');
 	},
 	{
 		root: null,
@@ -28,42 +25,41 @@ const navObserver = new IntersectionObserver(
 navObserver.observe(navElement);
 
 // EXPAND ALL HOUSE CARD DETAILS
-let expandAll = document.querySelector('.expand-houses');
+const expandAll = document.querySelector('.expand-houses');
 expandAll.addEventListener('click', function () {
 	houseContent.forEach(function (house) {
 		house.style.display = 'flex';
 	});
 });
 
-// TOGGLE BETWEEN DIFFERENT CONTENT DIVS
-let gryffBtn = document.querySelector('#gryffindor-btn');
-let slythBtn = document.querySelector('#slytherin-btn');
-let huffleBtn = document.querySelector('#hufflepuff-btn');
-let ravenBtn = document.querySelector('#ravenclaw-btn');
-let houseBtns = [gryffBtn, slythBtn, huffleBtn, ravenBtn];
+// TOGGLE BETWEEN DIFFERENT CONTENT
+const houseBtns = [
+	document.querySelector('#gryffindor-btn'),
+	document.querySelector('#slytherin-btn'),
+	document.querySelector('#hufflepuff-btn'),
+	document.querySelector('#ravenclaw-btn'),
+];
 
-let gryffContent = document.querySelector('#gryffindor');
-let slythContent = document.querySelector('#slytherin');
-let huffleContent = document.querySelector('#hufflepuff');
-let ravenContent = document.querySelector('#ravenclaw');
-let houseContent = [gryffContent, slythContent, huffleContent, ravenContent];
+const houseContent = [
+	document.querySelector('#gryffindor'),
+	document.querySelector('#slytherin'),
+	document.querySelector('#hufflepuff'),
+	document.querySelector('#ravenclaw'),
+];
 
-for (let i = 0; i < houseBtns.length; i++) {
-	houseBtns[i].addEventListener('click', function () {
-		for (let a = 0; a < houseContent.length; a++) {
-			houseContent[a].style.display = 'none';
-		}
-		houseContent[i].style.display = 'flex';
+houseBtns.forEach((button, index) => {
+	button.addEventListener('click', () => {
+		houseContent.forEach(content => (content.style.display = 'none'));
+		houseContent[index].style.display = 'flex';
 	});
-}
+});
 
 // Form Apply Functionality
-let apply = () => {
-	let name = document.querySelector('#name').value;
-	let age = document.querySelector('#age').value;
-	let trait = document.querySelector('#trait').value;
-	let response = document.querySelector('.submission-response');
-
+const apply = () => {
+	const name = document.querySelector('#name').value;
+	const age = document.querySelector('#age').value;
+	const trait = document.querySelector('#trait').value;
+	const response = document.querySelector('.submission-response');
 	trait = trait.toLowerCase().trim();
 
 	// Underage
@@ -115,16 +111,15 @@ let apply = () => {
 	}
 };
 
-let applyBtn = document.getElementById('apply-btn');
+const applyBtn = document.getElementById('apply-btn');
 applyBtn.addEventListener('click', apply);
 
 // Form Status Functionality
-let statusCheck = () => {
-	let name = document.querySelector('#name').value;
-	let age = document.querySelector('#age').value;
-	let applied = document.querySelector('#applied').value;
-	let response = document.querySelector('.submission-response');
-
+const statusCheck = () => {
+	const name = document.querySelector('#name').value;
+	const age = document.querySelector('#age').value;
+	const applied = document.querySelector('#applied').value;
+	const response = document.querySelector('.submission-response');
 	applied = applied.toLowerCase().trim();
 
 	if (age >= 11 && applied === 'yes') {
@@ -137,11 +132,11 @@ let statusCheck = () => {
 		response.textContent = `🚨 Sorry, you have not provided enough information.`;
 	}
 };
-let statusBtn = document.getElementById('status-check-btn');
+const statusBtn = document.getElementById('status-check-btn');
 statusBtn.addEventListener('click', statusCheck);
 
 // Add Hover Functionality for Mobile
-let courseListing = document.querySelector('.course-listing-container');
-let navButtons = document.querySelector('.hero-nav');
+const courseListing = document.querySelector('.course-listing-container');
+const navButtons = document.querySelector('.hero-nav');
 courseListing.addEventListener('touchstart', function () {}, true);
 navButtons.addEventListener('touchstart', function () {}, true);
