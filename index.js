@@ -58,9 +58,8 @@ houseBtns.forEach((button, index) => {
 const apply = () => {
 	const name = document.querySelector('#name').value;
 	const age = document.querySelector('#age').value;
-	const trait = document.querySelector('#trait').value;
+	const trait = document.querySelector('#trait').value.toLowerCase().trim();
 	const response = document.querySelector('.submission-response');
-	trait = trait.toLowerCase().trim();
 
 	// Underage
 	if (age < 11 && age > 0) {
@@ -118,9 +117,8 @@ applyBtn.addEventListener('click', apply);
 const statusCheck = () => {
 	const name = document.querySelector('#name').value;
 	const age = document.querySelector('#age').value;
-	const applied = document.querySelector('#applied').value;
+	const applied = document.querySelector('#applied').value.toLowerCase().trim();
 	const response = document.querySelector('.submission-response');
-	applied = applied.toLowerCase().trim();
 
 	if (age >= 11 && applied === 'yes') {
 		response.textContent = `🦉 Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions.`;

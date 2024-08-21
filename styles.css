@@ -1,7 +1,11 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /* Element Styling */
 body {
 	background: rgba(246, 246, 246, 0.8);
-	font-family: "DM Sans", sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	margin: 0;
 }
 
@@ -20,7 +24,7 @@ p {
 }
 
 h1 {
-	font-family: "DM Serif Text", serif;
+	font-family: 'DM Serif Text', serif;
 	font-size: 100px;
 	font-weight: lighter;
 }
@@ -71,7 +75,7 @@ select {
 	width: 90%;
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
 	background-repeat: no-repeat;
 	background-position: right 1rem top 50%;
 	background-size: 0.5rem;
@@ -84,7 +88,7 @@ label {
 
 button {
 	color: #121212;
-	font-family: "DM Sans", sans-serif;
+	font-family: 'DM Sans', sans-serif;
 }
 
 button:hover {
@@ -95,11 +99,7 @@ button:hover {
 
 .hero-container {
 	align-items: center;
-	background: linear-gradient(
-			0deg,
-			rgba(255, 255, 255, 0.257),
-			rgba(255, 255, 255, 0.267)
-		),
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.257), rgba(255, 255, 255, 0.267)),
 		url(assets/hero-bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -213,8 +213,7 @@ button:hover {
 }
 
 .house-option img {
-	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg)
-		brightness(107%) contrast(105%);
+	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg) brightness(107%) contrast(105%);
 	width: 250px;
 }
 
@@ -237,22 +236,18 @@ button:hover {
 }
 
 #gryffindor-btn img {
-	filter: invert(47%) sepia(8%) saturate(2823%) hue-rotate(311deg)
-		brightness(107%) contrast(95%);
+	filter: invert(47%) sepia(8%) saturate(2823%) hue-rotate(311deg) brightness(107%) contrast(95%);
 }
 
 #slytherin-btn img {
-	filter: invert(30%) sepia(63%) saturate(3585%) hue-rotate(154deg)
-		brightness(84%) contrast(85%);
+	filter: invert(30%) sepia(63%) saturate(3585%) hue-rotate(154deg) brightness(84%) contrast(85%);
 }
 
 #ravenclaw-btn img {
-	filter: invert(42%) sepia(6%) saturate(5725%) hue-rotate(156deg)
-		brightness(98%) contrast(79%);
+	filter: invert(42%) sepia(6%) saturate(5725%) hue-rotate(156deg) brightness(98%) contrast(79%);
 }
 #hufflepuff-btn img {
-	filter: invert(71%) sepia(43%) saturate(507%) hue-rotate(12deg)
-		brightness(97%) contrast(86%);
+	filter: invert(71%) sepia(43%) saturate(507%) hue-rotate(12deg) brightness(97%) contrast(86%);
 }
 
 #gryffindor-btn {
@@ -309,11 +304,7 @@ button:hover {
 }
 
 #gryffindor .house-content-expanded {
-	background: linear-gradient(
-		180deg,
-		rgba(154, 54, 50, 0.8) 0%,
-		rgba(88, 46, 47, 0.9) 100%
-	);
+	background: linear-gradient(180deg, rgba(154, 54, 50, 0.8) 0%, rgba(88, 46, 47, 0.9) 100%);
 }
 
 #gryffindor li {
@@ -321,11 +312,7 @@ button:hover {
 }
 
 #slytherin .house-content-expanded {
-	background: linear-gradient(
-		180deg,
-		rgba(20, 79, 69, 0.9) 0%,
-		rgba(24, 66, 43, 0.9) 100%
-	);
+	background: linear-gradient(180deg, rgba(20, 79, 69, 0.9) 0%, rgba(24, 66, 43, 0.9) 100%);
 }
 
 #slytherin li {
@@ -333,11 +320,7 @@ button:hover {
 }
 
 #ravenclaw .house-content-expanded {
-	background: linear-gradient(
-		180deg,
-		rgba(36, 65, 105, 0.9) 0%,
-		rgba(21, 36, 59, 0.9) 100%
-	);
+	background: linear-gradient(180deg, rgba(36, 65, 105, 0.9) 0%, rgba(21, 36, 59, 0.9) 100%);
 }
 
 #ravenclaw li {
