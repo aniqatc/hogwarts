@@ -1,34 +1,64 @@
-## Hogwarts Landing Page
+# Hogwarts Landing Page
 
-[https://hogwarts.aniqa.dev/](https://hogwarts.aniqa.dev/)
+A fan landing page for Hogwarts from the Harry Potter series, with house profiles, a course list and an application form that sorts you into a house.
 
-🧙🏻‍♀️ A landing page about the fictional institution, Hogwarts, from the Harry Potter series. Utilizes CSS grids, flexbox, animations, form validation, if-else statements based on user inputs, and for loops to enable toggling between different content.
+**[Live site](https://hogwarts.aniqa.dev)**
 
-# Preview
-<div align="center">
-<a href="https://hogwarts.aniqa.dev" target="_blank">
-<img src="https://github.com/aniqatc/hogwarts/blob/main/assets/preview.gif?raw=true" style="max-width:100%;"></a></div>
+<p align="center"><a href="https://hogwarts.aniqa.dev"><img src="assets/preview.gif" alt="Scrolling through the page: the hero, the four house cards opening, the course grid and the application form" width="600"></a></p>
 
 ## Tech
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML, CSS and JavaScript
+- Font Awesome icons
 
-## Key Features
+## Features
 
-- A fully responsive and minimalistic webpage
-- Courses section: overlayed text on an element that appears on `:hover`
-- Courses section: responsive grid with the help of `@media` declarations and `grid-column` and `nth-child()`
-- Utilized `@keyframes` animations that appear on `:hover` for all buttons and text overlays
-- Sticky navigation that appears at the bottom of the window after the hero is no longer in the viewport using `IntersectionObserver`
-- Functional form with logic built with `if else` statements
-- Form has two buttons that execute different logic and print different messages based on user input
-- Form validation to avoid incomplete or empty answers - printing a message to prompt user to complete the form again
-- Utilized `scrollIntoView()` to allow smooth scrolling
-- Created cards with a subtle animation to represent each Hogwarts house — clicking on each card will toggle content relating to the respective Hogwarts house
-- Used nested `for` loops
+- Four house cards; click one to open its profile, or "Expand All" to see every house
+- A grid of 10 courses, from Herbology to Defense Against Dark Arts, with descriptions that appear on hover
+- An application form: pick a trait to be sorted into a house, or check your status. Under-11s are told to come back after their birthday
+- A navigation bar that sticks to the bottom of the screen once you scroll past the hero, with smooth scrolling to each section
 
-## Future Features
+## Design
 
-- Add footsteps that follow mouse cursor
+- A minimal layout with animated hover effects on buttons and course cards
+- Six breakpoints, and the course grid uses `grid-column` and `nth-child()` to center its last row
+- Custom styling for the form's dropdowns so they look the same in every browser
+
+## Project structure
+
+- `index.html`: the page
+- `styles.css`: layout, animations and breakpoints
+- `index.js`: navigation, house cards and form logic
+- `assets/`, `avatars/`, `background/`: house crests, founder and member portraits, backgrounds and the preview GIF
+
+## Key concepts
+
+- **IntersectionObserver** watches the hero and turns on the sticky navigation once it leaves the screen.
+- **Event delegation** on the navigation, so one listener handles every link.
+- **Toggling with arrays.** House buttons and their content sit in matching arrays, so clicking one hides the rest and shows its own by index.
+- **Form logic with `if`/`else`**, checking age and trait to choose a house or a status message.
+- **An empty `touchstart` listener** so phones apply hover styles when you tap.
+
+## Setup
+
+No build step or API keys. Open `index.html`, or serve the folder locally:
+
+```bash
+git clone https://github.com/aniqatc/hogwarts.git
+cd hogwarts
+python3 -m http.server
+```
+
+## Changelog
+
+### August 2024
+
+- Fixed an error with the form buttons and smoothed the scrolling
+
+### November 2023
+
+- Navigation uses event delegation, plus small code cleanups
+
+### November 2022
+
+- Initial release
