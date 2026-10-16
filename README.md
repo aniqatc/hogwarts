@@ -15,7 +15,7 @@ A fan landing page for Hogwarts from the Harry Potter series, with house profile
 
 - Four house cards; click one to open its profile, or "Expand All" to see every house
 - A grid of 10 courses, from Herbology to Defense Against Dark Arts, with descriptions that appear on hover
-- An application form: pick a trait to be sorted into a house, or check your status. Under-11s are told to come back after their birthday
+- An application form: pick a trait to be sorted into a house (the Sorting Hat may overrule the house you asked for), or check your status. Under-11s are told to come back after their birthday
 - A navigation bar that sticks to the bottom of the screen once you scroll past the hero, with smooth scrolling to each section
 
 ## Design

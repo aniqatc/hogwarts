@@ -55,59 +55,52 @@ houseBtns.forEach((button, index) => {
 });
 
 // Form Apply Functionality
+const houseTraits = {
+	Ravenclaw: ['clever', 'creative', 'witty', 'curious', 'observant'],
+	Slytherin: ['ambitious', 'cunning', 'pride', 'leadership', 'competitive'],
+	Gryffindor: ['brave', 'determination', 'adventurous', 'idealistic', 'daring'],
+	Hufflepuff: ['dedicated', 'hardworking', 'loyal', 'patient', 'modest'],
+};
+
+const houseMessages = {
+	Ravenclaw: name => `🦅 You're a match for Ravenclaw! Congrats, ${name}! We'll be in touch with you soon.`,
+	Slytherin: name => `🐍 ${name}, you'd be a great addition to Slytherin! We'll be in touch with you soon.`,
+	Gryffindor: name => `🦁 ${name}, you'd be a great addition to Gryffindor! We'll be in touch with you soon.`,
+	Hufflepuff: name => `🦡 ${name}, you'd be a great addition to Hufflepuff! We'll be in touch with you soon.`,
+};
+
+const notEnoughInfo = `🚨 Sorry, you have not provided enough information.`;
+
+// Returns the age as a number, or null if it's blank or not a real age
+const readAge = () => {
+	const age = Number(document.querySelector('#age').value);
+	return document.querySelector('#age').value.trim() !== '' && age > 0 ? age : null;
+};
+
 const apply = () => {
-	const name = document.querySelector('#name').value;
-	const age = document.querySelector('#age').value;
+	const name = document.querySelector('#name').value.trim();
+	const age = readAge();
 	const trait = document.querySelector('#trait').value.toLowerCase().trim();
+	const chosenHouse = document.querySelector('#house').value;
 	const response = document.querySelector('.submission-response');
 
 	// Underage
-	if (age < 11 && age > 0) {
+	if (age !== null && age < 11) {
 		response.textContent = `🎂 Sorry, you are not qualified. Please try again when you reach your 11th birthday!`;
-
-		// Ravenclaw
-	} else if (
-		(age >= 11 && trait === 'clever') ||
-		trait === 'creative' ||
-		trait === 'witty' ||
-		trait === 'curious' ||
-		trait === 'observant'
-	) {
-		response.textContent = `🦅 You're a match for Ravenclaw! Congrats, ${name}! We'll be in touch with you soon.`;
-
-		// Slytherin
-	} else if (
-		(age >= 11 && trait === 'ambitious') ||
-		trait === 'cunning' ||
-		trait === 'pride' ||
-		trait === 'leadership' ||
-		trait === 'competitive'
-	) {
-		response.textContent = `🐍 ${name}, you'd be a great addition to Slytherin! We'll be in touch with you soon.`;
-
-		// Gryffindor
-	} else if (
-		(age >= 11 && trait === 'brave') ||
-		trait === 'determination' ||
-		trait === 'adventurous' ||
-		trait === 'idealistic' ||
-		trait === 'daring'
-	) {
-		response.textContent = `🦁 ${name}, you'd be a great addition to Gryffindor! We'll be in touch with you soon.`;
-
-		// Hufflepuff
-	} else if (
-		(age >= 11 && trait === 'dedicated') ||
-		trait === 'hardworking' ||
-		trait === 'loyal' ||
-		trait === 'patient' ||
-		trait === 'modest'
-	) {
-		response.textContent = `🦡 ${name}, you'd be a great addition to Hufflepuff! We'll be in touch with you soon.`;
-	} else {
-		// Empty Responses
-		response.textContent = `🚨 Sorry, you have not provided enough information.`;
+		return;
 	}
+
+	// Every field except the house preference is needed to be sorted
+	const house = Object.keys(houseTraits).find(key => houseTraits[key].includes(trait));
+	if (!name || age === null || !house) {
+		response.textContent = notEnoughInfo;
+		return;
+	}
+
+	// The Sorting Hat decides by trait, but mention the house they asked for if it differs
+	const preference =
+		chosenHouse && chosenHouse !== house ? ` (You asked for ${chosenHouse}, but the Sorting Hat had other ideas!)` : '';
+	response.textContent = houseMessages[house](name) + preference;
 };
 
 const applyBtn = document.getElementById('apply-btn');
@@ -115,19 +108,19 @@ applyBtn.addEventListener('click', apply);
 
 // Form Status Functionality
 const statusCheck = () => {
-	const name = document.querySelector('#name').value;
-	const age = document.querySelector('#age').value;
+	const name = document.querySelector('#name').value.trim();
+	const age = readAge();
 	const applied = document.querySelector('#applied').value.toLowerCase().trim();
 	const response = document.querySelector('.submission-response');
 
-	if (age >= 11 && applied === 'yes') {
-		response.textContent = `🦉 Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions.`;
-	} else if ((age <= 11 && applied === 'no') || applied === 'yes') {
+	if (!name || age === null || (applied !== 'yes' && applied !== 'no')) {
+		response.textContent = notEnoughInfo;
+	} else if (age < 11) {
 		response.textContent = `🎂 Unfortunately, you're not old enough, ${name}. Please check back in once you've turned 11. `;
-	} else if (age >= 11 && applied === 'no') {
-		response.textContent = `🪄 You are qualified to apply, ${name}!`;
+	} else if (applied === 'yes') {
+		response.textContent = `🦉 Thank you for sending your application, ${name}! You are qualified to attend. An owl will be arriving soon with your decision and instructions.`;
 	} else {
-		response.textContent = `🚨 Sorry, you have not provided enough information.`;
+		response.textContent = `🪄 You are qualified to apply, ${name}!`;
 	}
 };
 const statusBtn = document.getElementById('status-check-btn');
